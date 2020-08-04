@@ -1,0 +1,1 @@
+{"version":3,"sources":["concat.css"],"names":[],"mappings":"AAAA;EACE,uBAAuB,EAAE;;AAE3B;EACE,sBAAsB,EAAE","file":"prefix.css","sourcesContent":["nav {\n  background-color: coral; }\n\nsection {\n  background-color: grey; }\n"]}
