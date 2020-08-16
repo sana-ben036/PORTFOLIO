@@ -1,0 +1,42 @@
+// color:::::::
+
+$color1:#000000;
+$color3:#333333;
+$color4:#212121;
+$color5:#2c3e50;
+$color6:#495057;
+$color7:#ffffff;
+$color8:#cccccc;
+$color9:#bac964;
+
+
+
+
+// font:::::::
+
+$primaryfont: 'Montserrat', sans-serif;
+$secondaryfont:'Caveat Brush', cursive;
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: $primaryfont;
+    background-color:$color4;
+    font-size: 1rem;
+    
+
+}
+
+@mixin position ($p,$t,$l,$r){
+    position:$p;
+    top:$t;
+    left:$l;
+    right: $r;
+}

@@ -1,4 +1,99 @@
-section{
-    background-color:grey;
+.site-hero{
+    height: 753px;
+    padding: 20px;
+    //background-color: opacify($color: #0000007c, $amount: 0);
+    background-image: url(/dist/img/Assets/pexels-miguel-á-padriñán-1591060.jpg);
     
+    .name{
+        width: auto;
+        color:$color7;
+        font-family: $secondaryfont;
+        font-size: 50px;
+    }
+    .profil{
+        margin-top: 100px;
+        margin-left: 760px;
+        font-family: $secondaryfont;
+        color:$color8;
+        font-size: 50px;
+    }
+}
+.site-section{
+    width: 80%;
+    height: 900px;
+    margin: 0 auto;
+    padding: 2%  ;
+    .title{
+        margin: 2% 0;
+        color:$color7;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $secondaryfont;
+        font-size: 1.5rem;
+        
+    }
+    .sub-nav{
+        width: 100%;
+        height: 60px;
+        margin: 2% 0;
+        .nav{
+            width: 30%;
+            margin: 0 auto ;
+            display: flex;
+            flex-direction: row;
+            &_item{
+                font-size: 1rem;
+                margin:15px auto ;
+            }
+            &_link{
+                text-decoration: none;
+                color: $color8; 
+            }
+        }
+    }
+    .list-projets{
+        width: 85%;
+        height: 630px;
+        margin: 5% auto;
+        padding: 2%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: content-box;
+        .projet{
+            width: 295;
+            height: 310px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            &_img{
+                width: 295px;
+                height: 230px;
+                margin-bottom: 10px ;
+                img{
+                width: 295px;
+                border-radius: 20px;
+                }
+            }
+            &_title{
+                width: 295px;
+                height: 40px;
+                text-align: center;
+                margin-bottom: 10px ;
+                color:$color8;
+            }
+            &_type{
+                width: 295px;
+                height: 40px;
+                color:$color6;
+                text-align: center;
+                margin-bottom: 10px ;
+                font-size: 15px;
+                
+            }
+
+            
+            
+        }
+    }
 }

@@ -1,0 +1,39 @@
+header{
+    @include position (sticky,0,0,0);
+    z-index: 2;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    padding:  10px ;
+    background-color: $color7;
+    
+    .logo{
+        width: 10%;
+        &_img{
+            width: 68%;
+            
+        }
+
+    }
+    .navbar{
+        width: 80%;
+        .nav{
+            width: 50%;
+            height: 100px;
+            margin:  auto ;
+            display: flex;
+            flex-direction: row;
+            &_item{
+                margin:40px auto ;
+                text-transform: uppercase;    
+            }
+            &_link{
+                text-decoration: none;
+                color: $color6; 
+            }
+        }
+
+    }
+    
+}
