@@ -1,99 +1,115 @@
+// section ::::::::::::::::::::::
 .site-hero{
-    height: 753px;
+    height: 650px;
     padding: 20px;
     //background-color: opacify($color: #0000007c, $amount: 0);
-    background-image: url(/dist/img/Assets/pexels-miguel-á-padriñán-1591060.jpg);
+    background-image: url(/dist/img/Assets/home-bg-2.jpg);
     
     .name{
         width: auto;
-        color:$color7;
+        margin-top: 50px;
+        margin-left: 10%;
+        color:$color6;
         font-family: $secondaryfont;
-        font-size: 50px;
+        font-size: 3rem;
     }
     .profil{
-        margin-top: 100px;
-        margin-left: 760px;
-        font-family: $secondaryfont;
-        color:$color8;
-        font-size: 50px;
-    }
-}
-.site-section{
-    width: 80%;
-    height: 900px;
-    margin: 0 auto;
-    padding: 2%  ;
-    .title{
-        margin: 2% 0;
-        color:$color7;
-        text-transform: uppercase;
         text-align: center;
+        width: auto;
+        margin-top: 150px;
+        margin-left: 50%;
         font-family: $secondaryfont;
-        font-size: 1.5rem;
+        color:$color3;
+        font-size: 2rem;
         
     }
-    .sub-nav{
-        width: 100%;
-        height: 60px;
-        margin: 2% 0;
-        .nav{
-            width: 30%;
-            margin: 0 auto ;
-            display: flex;
-            flex-direction: row;
-            &_item{
-                font-size: 1rem;
-                margin:15px auto ;
-            }
-            &_link{
-                text-decoration: none;
-                color: $color8; 
-            }
-        }
+}
+
+
+.site-section{
+    background-color: palegreen;
+    width: 70%;
+    height: 830px;
+    margin: 50px auto;
+    padding: 10px 0 ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .title{
+        height: 40px;
+        margin: 10px auto;
+        color:$color7;
+        //text-transform: uppercase;
+        text-align: center;
+        font-family: $secondaryfont;
+        font-size: 2rem;
     }
-    .list-projets{
-        width: 85%;
-        height: 630px;
-        margin: 5% auto;
-        padding: 2%;
+}
+
+// contenu de section :::::::::::::::::
+.sub-nav{
+    height: 40px;
+    margin: 10px auto;
+    .nav{
+        width: 30%;
+        margin: 0 auto ;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        box-sizing: content-box;
-        .projet{
-            width: 295;
-            height: 310px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            &_img{
-                width: 295px;
-                height: 230px;
-                margin-bottom: 10px ;
-                img{
-                width: 295px;
-                border-radius: 20px;
-                }
+        &_item{
+            font-size: 1rem;
+            margin:15px auto ;
+        }
+        &_link{
+            text-decoration: none;
+            color: $color8; 
+        }
+    }
+}
+.list-projets{
+    background-color: paleturquoise;
+    min-height: 630px;
+    margin: 50px auto;
+    //padding: 2% 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .projet{
+        background-color: palevioletred;
+        width: 295;
+        height: 310px;
+        margin: 5px auto;
+        //padding: 10px ;
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            color:$color7;
+        }
+        
+        &_img{
+            width: 295px;
+            height: 230px;
+            margin-bottom: 10px ;
+            img{
+            width: 295px;
+            border-radius: 20px;
             }
-            &_title{
-                width: 295px;
-                height: 40px;
-                text-align: center;
-                margin-bottom: 10px ;
-                color:$color8;
-            }
-            &_type{
-                width: 295px;
-                height: 40px;
-                color:$color6;
-                text-align: center;
-                margin-bottom: 10px ;
-                font-size: 15px;
-                
-            }
-
-            
-            
+        }
+        &_title{
+            width: 295px;
+            height: 40px;
+            text-align: center;
+            margin-bottom: 10px ;
+            font-size: 1.2rem;
+        }
+        &_type{
+            width: 295px;
+            height: 40px;
+            color:$color6;
+            text-align: center;
+            margin-bottom: 10px ;
         }
     }
 }

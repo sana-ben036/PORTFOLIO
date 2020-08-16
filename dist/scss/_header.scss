@@ -9,7 +9,7 @@ header{
     background-color: $color7;
     
     .logo{
-        width: 10%;
+        min-width: 10%;
         &_img{
             width: 68%;
             
@@ -24,9 +24,11 @@ header{
             margin:  auto ;
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             &_item{
                 margin:40px auto ;
                 text-transform: uppercase;    
+                font-weight: 400;
             }
             &_link{
                 text-decoration: none;
