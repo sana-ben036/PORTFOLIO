@@ -8,16 +8,16 @@ body {
   background-color: #212121;
   font-size: 1rem; }
 
-.section, .section-portfolio, .section-about {
+.section, .section-portfolio, .section-about, .section-skills {
   width: 70%;
-  min-height: 830px;
-  margin: 50px auto;
+  min-height: 400px;
+  margin: 30px auto;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap; }
 
-.section-title, .section-portfolio .title, .section-about .title {
+.section-title, .section-portfolio .title, .section-about .title, .section-skills .part .title {
   height: 40px;
   margin: 10px auto;
   color: #ffffff;
@@ -65,6 +65,8 @@ header {
       header .navbar .nav_link {
         text-decoration: none;
         color: #495057; }
+        header .navbar .nav_link:hover {
+          color: #bac964; }
 
 .section-home {
   height: 650px;
@@ -98,11 +100,12 @@ header {
       flex-direction: row;
       flex-wrap: wrap; }
       .section-portfolio .sub-nav .nav_item {
-        font-size: 1rem;
         margin: 15px auto; }
       .section-portfolio .sub-nav .nav_link {
         text-decoration: none;
         color: #cccccc; }
+        .section-portfolio .sub-nav .nav_link:hover {
+          color: #bac964; }
   .section-portfolio .contenair .projet {
     width: 295;
     height: 310px;
@@ -165,3 +168,44 @@ header {
       font-weight: 300; }
     .section-about .contenair .list_item p {
       margin: 10px 0; }
+
+.section-skills {
+  flex-direction: row; }
+  .section-skills .part {
+    width: 500px;
+    height: 335px;
+    margin: 10px auto;
+    padding: 5px auto; }
+    .section-skills .part .text {
+      color: #ffffff91;
+      font-weight: 300;
+      line-height: 1.5;
+      padding: 10px;
+      margin: 10px auto; }
+    .section-skills .part .btn {
+      width: 380px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between; }
+      .section-skills .part .btn_element {
+        background-color: #bac964;
+        color: #ffffff;
+        width: 180px;
+        height: 50px;
+        border: none;
+        border-radius: 40px;
+        text-transform: uppercase;
+        font-weight: 300; }
+        .section-skills .part .btn_element:hover {
+          color: #bac964;
+          background-color: #ffffff; }
+        .section-skills .part .btn_element--cv {
+          background-color: #495057; }
+          .section-skills .part .btn_element--cv:hover {
+            color: #495057;
+            background-color: #ffffff; }
+    .section-skills .part .photo img {
+      width: 500px;
+      border-radius: 10px; }
