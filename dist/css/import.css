@@ -12,10 +12,7 @@ body {
   width: 70%;
   min-height: 400px;
   margin: 30px auto;
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; }
+  padding: 10px 0; }
 
 .section-title, .section-portfolio .title, .section-about .title, .section-skills .part .title {
   height: 40px;
@@ -170,7 +167,9 @@ header {
       margin: 10px 0; }
 
 .section-skills {
-  flex-direction: row; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
   .section-skills .part {
     width: 500px;
     height: 335px;

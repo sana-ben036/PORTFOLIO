@@ -55,6 +55,7 @@
     }
     .contenair{
         @extend .section-contenair;
+        
         .projet{
             width: 295;
             height: 310px;
@@ -154,7 +155,9 @@
 }
 .section-skills{
     @extend .section;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
         .part{
             width: 500px;
             height: 335px;
