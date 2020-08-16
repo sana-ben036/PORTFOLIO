@@ -8,6 +8,7 @@ $color6:#495057;
 $color7:#ffffff;
 $color8:#cccccc;
 $color9:#bac964;
+$color10:#ffffff91;
 
 
 
@@ -39,4 +40,33 @@ body {
     top:$t;
     left:$l;
     right: $r;
+}
+
+.section{
+    width: 70%;
+    min-height: 830px;
+    margin: 50px auto;
+    padding: 10px 0 ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.section-title{
+    height: 40px;
+        margin: 10px auto;
+        color:$color7;
+        //text-transform: uppercase;
+        text-align: center;
+        font-family: $secondaryfont;
+        font-size: 2rem;
+}
+.section-contenair{
+    width: 100%;
+        min-height: 630px;
+        margin: 50px auto;
+        //padding: 2% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 }

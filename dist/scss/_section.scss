@@ -1,5 +1,5 @@
 // section ::::::::::::::::::::::
-.site-hero{
+.section-home{
     height: 650px;
     padding: 20px;
     //background-color: opacify($color: #0000007c, $amount: 0);
@@ -26,90 +26,143 @@
 }
 
 
-.site-section{
-    background-color: palegreen;
-    width: 70%;
-    height: 830px;
-    margin: 50px auto;
-    padding: 10px 0 ;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.section-portfolio{
+    background-color: aquamarine;
+
+    @extend .section;
 
     .title{
+        @extend .section-title;
+    }
+    .sub-nav{
         height: 40px;
         margin: 10px auto;
-        color:$color7;
-        //text-transform: uppercase;
-        text-align: center;
-        font-family: $secondaryfont;
-        font-size: 2rem;
+        .nav{
+            width: 30%;
+            margin: 0 auto ;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            &_item{
+                font-size: 1rem;
+                margin:15px auto ;
+            }
+            &_link{
+                text-decoration: none;
+                color: $color8; 
+            }
+        }
+    }
+    .contenair{
+        @extend .section-contenair;
+        .projet{
+            width: 295;
+            height: 310px;
+            margin: 5px auto;
+            //padding: 10px ;
+            display: flex;
+            flex-direction: column;
+            a{
+                text-decoration: none;
+                color:$color7;
+            }
+            
+            &_img{
+                width: 295px;
+                height: 230px;
+                margin-bottom: 10px ;
+                img{
+                width: 295px;
+                border-radius: 20px;
+                }
+            }
+            &_title{
+                width: 295px;
+                height: 40px;
+                text-align: center;
+                margin-bottom: 10px ;
+                font-size: 1.2rem;
+            }
+            &_type{
+                width: 295px;
+                height: 40px;
+                color:$color6;
+                text-align: center;
+                margin-bottom: 10px ;
+            }
+        }
     }
 }
 
-// contenu de section :::::::::::::::::
-.sub-nav{
-    height: 40px;
-    margin: 10px auto;
-    .nav{
-        width: 30%;
-        margin: 0 auto ;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        &_item{
-            font-size: 1rem;
-            margin:15px auto ;
-        }
-        &_link{
-            text-decoration: none;
-            color: $color8; 
-        }
+.section-about{
+    @extend .section;
+    .title{
+        @extend .section-title;
     }
-}
-.list-projets{
-    background-color: paleturquoise;
-    min-height: 630px;
-    margin: 50px auto;
-    //padding: 2% 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    .projet{
-        background-color: palevioletred;
-        width: 295;
-        height: 310px;
-        margin: 5px auto;
-        //padding: 10px ;
-        display: flex;
-        flex-direction: column;
-        a{
-            text-decoration: none;
-            color:$color7;
-        }
+    .contenair{
+        @extend .section-contenair;
+        .list{
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            &_title{
+                font-size: 1.2rem;
+                font-weight: 300;
+                color:$color8;
+                margin: 20px 0;
         
-        &_img{
-            width: 295px;
-            height: 230px;
-            margin-bottom: 10px ;
-            img{
-            width: 295px;
-            border-radius: 20px;
             }
-        }
-        &_title{
-            width: 295px;
-            height: 40px;
-            text-align: center;
-            margin-bottom: 10px ;
-            font-size: 1.2rem;
-        }
-        &_type{
-            width: 295px;
-            height: 40px;
-            color:$color6;
-            text-align: center;
-            margin-bottom: 10px ;
+            &_item{
+                height: 180px ;
+                background-color: $color3;
+                margin: 5px 0;
+                padding: 15px;
+                border-radius: 20px ;
+                .date{
+                    color: $color7;
+                    font-weight: bold;
+                    font-size: .6rem;
+                    
+    
+                }
+                .profil{
+                    color: $color9;
+                    font-size: 1.2rem;
+                    font-weight: 300;
+    
+                }
+                .detail{
+                    
+                    color: $color10;
+                    font-weight: 300;
+                    line-height: 1.5;
+    
+                }
+                .lieu{
+                    color: $color8;
+                    font-weight: 300;
+    
+                }
+                p{
+                    margin: 10px 0;
+                }
+        
+            }
+        
+        
+        
+            
         }
     }
+    
 }
+
+    
+    
+    
+    
+
+
+
+

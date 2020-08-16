@@ -8,6 +8,31 @@ body {
   background-color: #212121;
   font-size: 1rem; }
 
+.section, .section-portfolio, .section-about {
+  width: 70%;
+  min-height: 830px;
+  margin: 50px auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.section-title, .section-portfolio .title, .section-about .title {
+  height: 40px;
+  margin: 10px auto;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Caveat Brush", cursive;
+  font-size: 2rem; }
+
+.section-contenair, .section-portfolio .contenair, .section-about .contenair {
+  width: 100%;
+  min-height: 630px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
 header {
   position: sticky;
   top: 0;
@@ -41,18 +66,18 @@ header {
         text-decoration: none;
         color: #495057; }
 
-.site-hero {
+.section-home {
   height: 650px;
   padding: 20px;
   background-image: url(/dist/img/Assets/home-bg-2.jpg); }
-  .site-hero .name {
+  .section-home .name {
     width: auto;
     margin-top: 50px;
     margin-left: 10%;
     color: #495057;
     font-family: "Caveat Brush", cursive;
     font-size: 3rem; }
-  .site-hero .profil {
+  .section-home .profil {
     text-align: center;
     width: auto;
     margin-top: 150px;
@@ -61,72 +86,82 @@ header {
     color: #333333;
     font-size: 2rem; }
 
-.site-section {
-  background-color: palegreen;
-  width: 70%;
-  height: 830px;
-  margin: 50px auto;
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; }
-  .site-section .title {
+.section-portfolio {
+  background-color: aquamarine; }
+  .section-portfolio .sub-nav {
     height: 40px;
-    margin: 10px auto;
-    color: #ffffff;
-    text-align: center;
-    font-family: "Caveat Brush", cursive;
-    font-size: 2rem; }
-
-.sub-nav {
-  height: 40px;
-  margin: 10px auto; }
-  .sub-nav .nav {
-    width: 30%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .sub-nav .nav_item {
-      font-size: 1rem;
-      margin: 15px auto; }
-    .sub-nav .nav_link {
-      text-decoration: none;
-      color: #cccccc; }
-
-.list-projets {
-  background-color: paleturquoise;
-  min-height: 630px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
-  .list-projets .projet {
-    background-color: palevioletred;
+    margin: 10px auto; }
+    .section-portfolio .sub-nav .nav {
+      width: 30%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .section-portfolio .sub-nav .nav_item {
+        font-size: 1rem;
+        margin: 15px auto; }
+      .section-portfolio .sub-nav .nav_link {
+        text-decoration: none;
+        color: #cccccc; }
+  .section-portfolio .contenair .projet {
     width: 295;
     height: 310px;
     margin: 5px auto;
     display: flex;
     flex-direction: column; }
-    .list-projets .projet a {
+    .section-portfolio .contenair .projet a {
       text-decoration: none;
       color: #ffffff; }
-    .list-projets .projet_img {
+    .section-portfolio .contenair .projet_img {
       width: 295px;
       height: 230px;
       margin-bottom: 10px; }
-      .list-projets .projet_img img {
+      .section-portfolio .contenair .projet_img img {
         width: 295px;
         border-radius: 20px; }
-    .list-projets .projet_title {
+    .section-portfolio .contenair .projet_title {
       width: 295px;
       height: 40px;
       text-align: center;
       margin-bottom: 10px;
       font-size: 1.2rem; }
-    .list-projets .projet_type {
+    .section-portfolio .contenair .projet_type {
       width: 295px;
       height: 40px;
       color: #495057;
       text-align: center;
       margin-bottom: 10px; }
+
+.section-about .contenair .list {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .section-about .contenair .list_title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #cccccc;
+    margin: 20px 0; }
+  .section-about .contenair .list_item {
+    height: 180px;
+    background-color: #333333;
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 20px; }
+    .section-about .contenair .list_item .date {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: .6rem; }
+    .section-about .contenair .list_item .profil {
+      color: #bac964;
+      font-size: 1.2rem;
+      font-weight: 300; }
+    .section-about .contenair .list_item .detail {
+      color: #ffffff91;
+      font-weight: 300;
+      line-height: 1.5; }
+    .section-about .contenair .list_item .lieu {
+      color: #cccccc;
+      font-weight: 300; }
+    .section-about .contenair .list_item p {
+      margin: 10px 0; }
