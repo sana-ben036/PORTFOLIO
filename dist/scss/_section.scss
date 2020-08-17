@@ -168,11 +168,8 @@
 
             }
             .btn{
-                width: 380px;
-                margin: 20px auto;
-                @include flex (flex,row,nowrap);
-                justify-content: space-between;
-                
+                margin: 30px 0;
+                padding: 10px;
                 &_element{
                     @extend .button;
                     &--cv{
@@ -207,14 +204,12 @@
     }
     .contenair{
         @extend .section-contenair;
-        .item{
-            color: $color10;
-            width: 500px;
-            height: 500px;
-            margin: 20px auto;
-            @include flex (flex,column,nowrap);
-            &_input{
-                width: 450px;
+        .form{
+            @extend .contact;
+            width: 600px;
+            padding: 0 25px;
+            &_item{
+                max-width: 550px;
                 height: 50px;
                 border-radius: 10px;
                 background-color: $color3;
@@ -232,7 +227,12 @@
                 &--message{
                     height: 300px;
                 }
-            }
+            }      
+        }
+        .info{
+            @extend .contact;
+            width: 300px;
+            padding: 5px;
             &_title{
                 font-size: 1.2rem;
                 font-weight: 300;
@@ -240,7 +240,7 @@
                 text-transform: uppercase;
                 margin: 5px 0;   
             }
-            &_info{
+            &_item{
                 margin: 15px 0;
                 span{
                     text-transform: uppercase;
@@ -254,7 +254,6 @@
                     line-height: 1.5;
                 }
             }
-                
         }
             
             

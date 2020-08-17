@@ -30,7 +30,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap; }
 
-.button, .section-skills .part .btn_element, .section-contact .contenair .item_input--submit {
+.button, .section-skills .part .btn_element, .section-contact .contenair .form_item--submit {
   background-color: #bac964;
   color: #ffffff;
   width: 180px;
@@ -39,9 +39,17 @@ body {
   border-radius: 40px;
   text-transform: uppercase;
   font-weight: 300; }
-  .button:hover, .section-skills .part .btn_element:hover, .section-contact .contenair .item_input--submit:hover {
+  .button:hover, .section-skills .part .btn_element:hover, .section-contact .contenair .form_item--submit:hover {
     color: #bac964;
     background-color: #ffffff; }
+
+.contact, .section-contact .contenair .form, .section-contact .contenair .info {
+  color: #ffffff91;
+  height: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
 
 header {
   display: flex;
@@ -197,12 +205,8 @@ header {
       padding: 10px;
       margin: 10px auto; }
     .section-skills .part .btn {
-      width: 380px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between; }
+      margin: 30px 0;
+      padding: 10px; }
       .section-skills .part .btn_element--cv {
         background-color: #495057; }
         .section-skills .part .btn_element--cv:hover {
@@ -212,16 +216,11 @@ header {
       width: 500px;
       border-radius: 10px; }
 
-.section-contact .contenair .item {
-  color: #ffffff91;
-  width: 500px;
-  height: 500px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap; }
-  .section-contact .contenair .item_input {
-    width: 450px;
+.section-contact .contenair .form {
+  width: 600px;
+  padding: 0 25px; }
+  .section-contact .contenair .form_item {
+    max-width: 550px;
     height: 50px;
     border-radius: 10px;
     background-color: #333333;
@@ -231,24 +230,28 @@ header {
     font-weight: 300;
     font-size: 1rem;
     font-family: "Montserrat", sans-serif; }
-    .section-contact .contenair .item_input--submit {
+    .section-contact .contenair .form_item--submit {
       margin: 5px 0; }
-    .section-contact .contenair .item_input--message {
+    .section-contact .contenair .form_item--message {
       height: 300px; }
-  .section-contact .contenair .item_title {
+
+.section-contact .contenair .info {
+  width: 300px;
+  padding: 5px; }
+  .section-contact .contenair .info_title {
     font-size: 1.2rem;
     font-weight: 300;
     color: #cccccc;
     text-transform: uppercase;
     margin: 5px 0; }
-  .section-contact .contenair .item_info {
+  .section-contact .contenair .info_item {
     margin: 15px 0; }
-    .section-contact .contenair .item_info span {
+    .section-contact .contenair .info_item span {
       text-transform: uppercase;
       color: #2c3e50;
       font-weight: 300;
       margin: 5px 0; }
-    .section-contact .contenair .item_info p {
+    .section-contact .contenair .info_item p {
       margin: 5px 0;
       line-height: 1.5; }
 
