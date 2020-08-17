@@ -35,6 +35,16 @@ body {
 
 }
 
+// @mixin:::::::::::::::::::::::::
+
+@mixin flex ($f,$d,$w) {
+    display: $f;
+    flex-direction: $d;
+    flex-wrap: $w;
+
+    
+}
+
 @mixin position ($p,$t,$l,$r){
     position:$p;
     top:$t;
@@ -55,22 +65,22 @@ body {
 
 .section-title{
     height: 40px;
-        margin: 10px auto;
-        color:$color7;
-        //text-transform: uppercase;
-        text-align: center;
-        font-family: $secondaryfont;
-        font-size: 2rem;
+    margin: 10px auto;
+    color:$color7;
+    //text-transform: uppercase;
+    text-align: center;
+    font-family: $secondaryfont;
+    font-size: 2rem;
 }
 .section-contenair{
     width: 100%;
-        min-height: 630px;
-        margin: 50px auto;
-        //padding: 2% 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    min-height: 630px;
+    margin: 50px auto;
+    //padding: 2% 0;
+    @include flex (flex,row,wrap);
 }
+
+
 
 
 

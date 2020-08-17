@@ -27,7 +27,6 @@
 
 
 .section-portfolio{
-    background-color: aquamarine;
     @extend .section;
     .title{
         @extend .section-title;
@@ -38,9 +37,7 @@
         .nav{
             width: 30%;
             margin: 0 auto ;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include flex (flex,row,wrap);
             &_item{
                 margin:15px auto ;
             }
@@ -61,8 +58,7 @@
             height: 310px;
             margin: 5px auto;
             //padding: 10px ;
-            display: flex;
-            flex-direction: column;
+            @include flex (flex,column,nowrap);
             a{
                 text-decoration: none;
                 color:$color7;
@@ -105,8 +101,7 @@
         .list{
             width: 500px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: column;
+            @include flex (flex,column,nowrap);
             &_title{
                 font-size: 1.2rem;
                 font-weight: 300;
@@ -155,9 +150,7 @@
 }
 .section-skills{
     @extend .section;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex (flex,row,wrap);
         .part{
             width: 500px;
             height: 335px;
@@ -177,9 +170,7 @@
             .btn{
                 width: 380px;
                 margin: 20px auto;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
+                @include flex (flex,row,nowrap);
                 justify-content: space-between;
                 
                 &_element{
@@ -218,6 +209,28 @@
     
     
 
+}
+
+.section-contact{
+    @extend .section;
+    .title{
+        @extend .section-title;
+        .contenair{
+            background-color: lightcoral;
+            @extend .section-contenair;
+            .item{
+                background-color: lightgoldenrodyellow;
+                color: white;
+                width: 500px;
+                height: 335px;
+                margin: 10px auto;
+                padding: 5px auto;
+                @include flex (flex,column,nowrap);
+                
+
+            }
+        }
+    }
 }
 
 

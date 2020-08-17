@@ -8,13 +8,13 @@ body {
   background-color: #212121;
   font-size: 1rem; }
 
-.section, .section-portfolio, .section-about, .section-skills {
+.section, .section-portfolio, .section-about, .section-skills, .section-contact {
   width: 70%;
   min-height: 400px;
   margin: 30px auto;
   padding: 10px 0; }
 
-.section-title, .section-portfolio .title, .section-about .title, .section-skills .part .title {
+.section-title, .section-portfolio .title, .section-about .title, .section-skills .part .title, .section-contact .title {
   height: 40px;
   margin: 10px auto;
   color: #ffffff;
@@ -22,7 +22,7 @@ body {
   font-family: "Caveat Brush", cursive;
   font-size: 2rem; }
 
-.section-contenair, .section-portfolio .contenair, .section-about .contenair {
+.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .title .contenair {
   width: 100%;
   min-height: 630px;
   margin: 50px auto;
@@ -31,6 +31,9 @@ body {
   flex-wrap: wrap; }
 
 header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   position: sticky;
   top: 0;
   left: 0;
@@ -38,8 +41,6 @@ header {
   z-index: 2;
   width: 100%;
   height: 120px;
-  display: flex;
-  flex-direction: row;
   padding: 10px;
   background-color: #ffffff; }
   header .logo {
@@ -85,58 +86,59 @@ header {
     color: #333333;
     font-size: 2rem; }
 
-.section-portfolio {
-  background-color: aquamarine; }
-  .section-portfolio .sub-nav {
-    height: 40px;
-    margin: 10px auto; }
-    .section-portfolio .sub-nav .nav {
-      width: 30%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap; }
-      .section-portfolio .sub-nav .nav_item {
-        margin: 15px auto; }
-      .section-portfolio .sub-nav .nav_link {
-        text-decoration: none;
-        color: #cccccc; }
-        .section-portfolio .sub-nav .nav_link:hover {
-          color: #bac964; }
-  .section-portfolio .contenair .projet {
-    width: 295;
-    height: 310px;
-    margin: 5px auto;
+.section-portfolio .sub-nav {
+  height: 40px;
+  margin: 10px auto; }
+  .section-portfolio .sub-nav .nav {
+    width: 30%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column; }
-    .section-portfolio .contenair .projet a {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .section-portfolio .sub-nav .nav_item {
+      margin: 15px auto; }
+    .section-portfolio .sub-nav .nav_link {
       text-decoration: none;
-      color: #ffffff; }
-    .section-portfolio .contenair .projet_img {
+      color: #cccccc; }
+      .section-portfolio .sub-nav .nav_link:hover {
+        color: #bac964; }
+
+.section-portfolio .contenair .projet {
+  width: 295;
+  height: 310px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
+  .section-portfolio .contenair .projet a {
+    text-decoration: none;
+    color: #ffffff; }
+  .section-portfolio .contenair .projet_img {
+    width: 295px;
+    height: 230px;
+    margin-bottom: 10px; }
+    .section-portfolio .contenair .projet_img img {
       width: 295px;
-      height: 230px;
-      margin-bottom: 10px; }
-      .section-portfolio .contenair .projet_img img {
-        width: 295px;
-        border-radius: 20px; }
-    .section-portfolio .contenair .projet_title {
-      width: 295px;
-      height: 40px;
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 1.2rem; }
-    .section-portfolio .contenair .projet_type {
-      width: 295px;
-      height: 40px;
-      color: #495057;
-      text-align: center;
-      margin-bottom: 10px; }
+      border-radius: 20px; }
+  .section-portfolio .contenair .projet_title {
+    width: 295px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem; }
+  .section-portfolio .contenair .projet_type {
+    width: 295px;
+    height: 40px;
+    color: #495057;
+    text-align: center;
+    margin-bottom: 10px; }
 
 .section-about .contenair .list {
   width: 500px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: nowrap; }
   .section-about .contenair .list_title {
     font-size: 1.2rem;
     font-weight: 300;
@@ -208,3 +210,34 @@ header {
     .section-skills .part .photo img {
       width: 500px;
       border-radius: 10px; }
+
+.section-contact .title .contenair {
+  background-color: lightcoral; }
+  .section-contact .title .contenair .item {
+    background-color: lightgoldenrodyellow;
+    color: white;
+    width: 500px;
+    height: 335px;
+    margin: 10px auto;
+    padding: 5px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; }
+
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #333333;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center; }
+  footer p {
+    margin: auto 0;
+    color: #ffffff91;
+    font-weight: 300;
+    text-align: center; }
+  footer span {
+    margin: auto 0; }
+    footer span img {
+      width: 70%; }
