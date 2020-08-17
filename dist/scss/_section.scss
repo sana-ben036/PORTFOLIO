@@ -174,18 +174,7 @@
                 justify-content: space-between;
                 
                 &_element{
-                    background-color: $color9;
-                    color: $color7;
-                    width: 180px;
-                    height: 50px;
-                    border: none;
-                    border-radius: 40px;
-                    text-transform: uppercase;
-                    font-weight: 300;
-                    &:hover{
-                        color: $color9;
-                        background-color: $color7;
-                    }
+                    @extend .button;
                     &--cv{
                         background-color: $color6;
                         &:hover{
@@ -214,24 +203,67 @@
 .section-contact{
     @extend .section;
     .title{
-        @extend .section-title;
-        .contenair{
-            background-color: lightcoral;
-            @extend .section-contenair;
-            .item{
-                background-color: lightgoldenrodyellow;
-                color: white;
-                width: 500px;
-                height: 335px;
-                margin: 10px auto;
-                padding: 5px auto;
-                @include flex (flex,column,nowrap);
-                
-
-            }
-        }
+        @extend .section-title; 
     }
+    .contenair{
+        @extend .section-contenair;
+        .item{
+            color: $color10;
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+            @include flex (flex,column,nowrap);
+            &_input{
+                width: 450px;
+                height: 50px;
+                border-radius: 10px;
+                background-color: $color3;
+                margin: 5px 0;
+                border: none;
+                padding: 10px;
+                font-weight: 300;
+                font-size: 1rem;
+                font-family: $primaryfont;
+                &--submit{
+                    @extend .button;
+                    margin: 5px 0;
+    
+                }
+                &--message{
+                    height: 300px;
+                }
+            }
+            &_title{
+                font-size: 1.2rem;
+                font-weight: 300;
+                color:$color8;
+                text-transform: uppercase;
+                margin: 5px 0;   
+            }
+            &_info{
+                margin: 15px 0;
+                span{
+                    text-transform: uppercase;
+                    color: $color5;
+                    font-weight: 300;
+                    margin: 5px 0;
+
+                }
+                p{
+                    margin: 5px 0;
+                    line-height: 1.5;
+                }
+            }
+                
+        }
+            
+            
+
+    }
+    
 }
+
+
 
 
 

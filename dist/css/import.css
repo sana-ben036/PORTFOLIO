@@ -11,7 +11,7 @@ body {
 .section, .section-portfolio, .section-about, .section-skills, .section-contact {
   width: 70%;
   min-height: 400px;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 10px 0; }
 
 .section-title, .section-portfolio .title, .section-about .title, .section-skills .part .title, .section-contact .title {
@@ -22,13 +22,26 @@ body {
   font-family: "Caveat Brush", cursive;
   font-size: 2rem; }
 
-.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .title .contenair {
+.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair {
   width: 100%;
-  min-height: 630px;
-  margin: 50px auto;
+  min-height: 530px;
+  margin: 40px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
+
+.button, .section-skills .part .btn_element, .section-contact .contenair .item_input--submit {
+  background-color: #bac964;
+  color: #ffffff;
+  width: 180px;
+  height: 50px;
+  border: none;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-weight: 300; }
+  .button:hover, .section-skills .part .btn_element:hover, .section-contact .contenair .item_input--submit:hover {
+    color: #bac964;
+    background-color: #ffffff; }
 
 header {
   display: flex;
@@ -190,39 +203,54 @@ header {
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between; }
-      .section-skills .part .btn_element {
-        background-color: #bac964;
-        color: #ffffff;
-        width: 180px;
-        height: 50px;
-        border: none;
-        border-radius: 40px;
-        text-transform: uppercase;
-        font-weight: 300; }
-        .section-skills .part .btn_element:hover {
-          color: #bac964;
+      .section-skills .part .btn_element--cv {
+        background-color: #495057; }
+        .section-skills .part .btn_element--cv:hover {
+          color: #495057;
           background-color: #ffffff; }
-        .section-skills .part .btn_element--cv {
-          background-color: #495057; }
-          .section-skills .part .btn_element--cv:hover {
-            color: #495057;
-            background-color: #ffffff; }
     .section-skills .part .photo img {
       width: 500px;
       border-radius: 10px; }
 
-.section-contact .title .contenair {
-  background-color: lightcoral; }
-  .section-contact .title .contenair .item {
-    background-color: lightgoldenrodyellow;
-    color: white;
-    width: 500px;
-    height: 335px;
-    margin: 10px auto;
-    padding: 5px auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; }
+.section-contact .contenair .item {
+  color: #ffffff91;
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
+  .section-contact .contenair .item_input {
+    width: 450px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #333333;
+    margin: 5px 0;
+    border: none;
+    padding: 10px;
+    font-weight: 300;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif; }
+    .section-contact .contenair .item_input--submit {
+      margin: 5px 0; }
+    .section-contact .contenair .item_input--message {
+      height: 300px; }
+  .section-contact .contenair .item_title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #cccccc;
+    text-transform: uppercase;
+    margin: 5px 0; }
+  .section-contact .contenair .item_info {
+    margin: 15px 0; }
+    .section-contact .contenair .item_info span {
+      text-transform: uppercase;
+      color: #2c3e50;
+      font-weight: 300;
+      margin: 5px 0; }
+    .section-contact .contenair .item_info p {
+      margin: 5px 0;
+      line-height: 1.5; }
 
 footer {
   width: 100%;
