@@ -9,12 +9,19 @@ body {
   font-size: 1rem; }
 
 .section, .section-portfolio, .section-about, .section-skills, .section-contact {
+  background-color: mediumturquoise;
   width: 70%;
-  min-height: 400px;
+  height: auto;
   margin: 20px auto;
   padding: 10px 0; }
+  @media screen and (max-width: 1260px) {
+    .section, .section-portfolio, .section-about, .section-skills, .section-contact {
+      width: 90%; } }
+  @media screen and (max-width: 450px) {
+    .section, .section-portfolio, .section-about, .section-skills, .section-contact {
+      width: 98%; } }
 
-.section-title, .section-portfolio .title, .section-about .title, .section-skills .part .title, .section-contact .title {
+.section-title, .section-portfolio .title, .section-about .title, .section-skills .right .title, .section-skills .left .title, .section-contact .title {
   height: 40px;
   margin: 10px auto;
   color: #ffffff;
@@ -30,7 +37,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap; }
 
-.button, .section-skills .part .btn_element, .section-contact .contenair .form_item--submit {
+.button, .section-skills .right .btn_element, .section-skills .left .btn_element, .section-contact .contenair .form_item--submit {
   background-color: #bac964;
   color: #ffffff;
   width: 180px;
@@ -39,7 +46,7 @@ body {
   border-radius: 40px;
   text-transform: uppercase;
   font-weight: 300; }
-  .button:hover, .section-skills .part .btn_element:hover, .section-contact .contenair .form_item--submit:hover {
+  .button:hover, .section-skills .right .btn_element:hover, .section-skills .left .btn_element:hover, .section-contact .contenair .form_item--submit:hover {
     color: #bac964;
     background-color: #ffffff; }
 
@@ -50,42 +57,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; }
-
-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  width: 100%;
-  height: 120px;
-  padding: 10px;
-  background-color: #ffffff; }
-  header .logo {
-    min-width: 10%; }
-    header .logo_img {
-      width: 68%; }
-  header .navbar {
-    width: 80%; }
-    header .navbar .nav {
-      width: 50%;
-      height: 100px;
-      margin: auto;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap; }
-      header .navbar .nav_item {
-        margin: 40px auto;
-        text-transform: uppercase;
-        font-weight: 400; }
-      header .navbar .nav_link {
-        text-decoration: none;
-        color: #495057; }
-        header .navbar .nav_link:hover {
-          color: #bac964; }
 
 .section-home {
   height: 650px;
@@ -155,18 +126,22 @@ header {
     margin-bottom: 10px; }
 
 .section-about .contenair .list {
-  width: 500px;
+  background-color: mediumseagreen;
+  width: 48%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap; }
+  @media screen and (max-width: 655px) {
+    .section-about .contenair .list {
+      width: 80%; } }
   .section-about .contenair .list_title {
     font-size: 1.2rem;
     font-weight: 300;
     color: #cccccc;
     margin: 20px 0; }
   .section-about .contenair .list_item {
-    height: 180px;
+    min-height: 180px;
     background-color: #333333;
     margin: 5px 0;
     padding: 15px;
@@ -193,27 +168,38 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
-  .section-skills .part {
+  .section-skills .right, .section-skills .left {
+    background-color: palegreen;
     width: 500px;
     height: 335px;
     margin: 10px auto;
     padding: 5px auto; }
-    .section-skills .part .text {
+    @media screen and (max-width: 1120px) {
+      .section-skills .right, .section-skills .left {
+        width: 400px; } }
+    @media screen and (max-width: 900px) {
+      .section-skills .right, .section-skills .left {
+        width: 500px; } }
+    .section-skills .right .text, .section-skills .left .text {
       color: #ffffff91;
       font-weight: 300;
       line-height: 1.5;
       padding: 10px;
-      margin: 10px auto; }
-    .section-skills .part .btn {
+      margin: 10px auto;
+      text-align: justify; }
+    .section-skills .right .btn, .section-skills .left .btn {
       margin: 30px 0;
       padding: 10px; }
-      .section-skills .part .btn_element--cv {
+      .section-skills .right .btn_element--cv, .section-skills .left .btn_element--cv {
         background-color: #495057; }
-        .section-skills .part .btn_element--cv:hover {
+        .section-skills .right .btn_element--cv:hover, .section-skills .left .btn_element--cv:hover {
           color: #495057;
           background-color: #ffffff; }
-    .section-skills .part .photo img {
-      width: 500px;
+  .section-skills .left {
+    background-color: mistyrose;
+    text-align: center; }
+    .section-skills .left img {
+      width: 98%;
       border-radius: 10px; }
 
 .section-contact .contenair .form {

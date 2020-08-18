@@ -98,10 +98,20 @@
     }
     .contenair{
         @extend .section-contenair;
+        
         .list{
-            width: 500px;
+            background-color: mediumseagreen;
+            width: 48%;
             margin: 0 auto;
             @include flex (flex,column,nowrap);
+            @media screen and (max-width:655px){
+                width:80%;
+                
+            }
+            @media screen and (max-width:670px){
+                //max-width: 500px;
+                
+            }
             &_title{
                 font-size: 1.2rem;
                 font-weight: 300;
@@ -110,11 +120,19 @@
         
             }
             &_item{
-                height: 180px ;
+                min-height: 180px ;
                 background-color: $color3;
                 margin: 5px 0;
                 padding: 15px;
                 border-radius: 20px ;
+                @media screen and (max-width: 1115px ){
+                    //min-height: 200px ;
+                    
+                }
+                @media screen and (max-width:670px){
+                    //max-height: 180px;
+                    
+                }
                 .date{
                     color: $color7;
                     font-weight: bold;
@@ -133,6 +151,7 @@
                     color: $color10;
                     font-weight: 300;
                     line-height: 1.5;
+                    //text-align: justify;
     
                 }
                 .lieu{
@@ -151,11 +170,18 @@
 .section-skills{
     @extend .section;
     @include flex (flex,row,wrap);
-        .part{
+        .right{
+            background-color: palegreen;
             width: 500px;
             height: 335px;
             margin: 10px auto;
             padding: 5px auto;
+            @media screen and (max-width: 1120px ){
+                width: 400px ;    
+            }
+            @media screen and (max-width: 900px ){
+                width: 500px ;    
+            }
             .title{
                 @extend .section-title;
             }
@@ -165,6 +191,7 @@
                 line-height: 1.5;
                 padding: 10px;
                 margin: 10px auto;
+                text-align: justify;
 
             }
             .btn{
@@ -184,12 +211,24 @@
                 }
                 
             }
-            .photo{
-                img{
-                    width: 500px;
-                    border-radius: 10px;
-                    
+            
+        }
+        .left{
+            background-color: mistyrose;
+            @extend .right;
+            text-align: center;
+            
+            
+            img{
+                width: 98%;
+                border-radius: 10px;
+                @media screen and (max-width: 900px ){
+                    //width: 90% ;    
                 }
+                
+                
+                
+                
             }
         }
     
