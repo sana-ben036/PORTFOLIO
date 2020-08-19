@@ -7,20 +7,26 @@
     
     .name{
         width: auto;
-        margin-top: 50px;
+        margin-top: 100px;
         margin-left: 10%;
         color:$color6;
         font-family: $secondaryfont;
         font-size: 3rem;
+        @media screen and (max-width: 960px ){
+            font-size: 2rem;  
+        }
     }
     .profil{
         text-align: center;
         width: auto;
-        margin-top: 150px;
+        margin-top: 200px;
         margin-left: 50%;
         font-family: $secondaryfont;
         color:$color3;
         font-size: 2rem;
+        @media screen and (max-width: 960px ){
+            font-size: 1.5rem;  
+        }
         
     }
 }
@@ -100,7 +106,6 @@
         @extend .section-contenair;
         
         .list{
-            background-color: mediumseagreen;
             width: 48%;
             margin: 0 auto;
             @include flex (flex,column,nowrap);
@@ -171,17 +176,8 @@
     @extend .section;
     @include flex (flex,row,wrap);
         .right{
-            background-color: palegreen;
-            width: 500px;
-            height: 335px;
-            margin: 10px auto;
-            padding: 5px auto;
-            @media screen and (max-width: 1120px ){
-                width: 400px ;    
-            }
-            @media screen and (max-width: 900px ){
-                width: 500px ;    
-            }
+            @extend .skills;
+            
             .title{
                 @extend .section-title;
             }
@@ -190,21 +186,31 @@
                 font-weight: 300;
                 line-height: 1.5;
                 padding: 10px;
-                margin: 10px auto;
+                margin: 10px 20px;
                 text-align: justify;
 
             }
             .btn{
-                margin: 30px 0;
+                margin: 30px 20px;
                 padding: 10px;
+                @media screen and (max-width: 385px ){
+                    margin: 5px 0 ;    
+                }
+                @media screen and (max-width: 900px ){
+                    text-align: center;   
+                }
                 &_element{
                     @extend .button;
+                    
                     &--cv{
                         background-color: $color6;
                         &:hover{
                             color:$color6 ;
                             background-color: $color7;
                         }
+                        
+                        
+                        
 
                     }
                     
@@ -214,8 +220,7 @@
             
         }
         .left{
-            background-color: mistyrose;
-            @extend .right;
+            @extend .skills;
             text-align: center;
             
             
@@ -225,6 +230,7 @@
                 @media screen and (max-width: 900px ){
                     //width: 90% ;    
                 }
+                
                 
                 
                 
@@ -247,6 +253,7 @@
             @extend .contact;
             width: 600px;
             padding: 0 25px;
+            
             &_item{
                 max-width: 550px;
                 height: 50px;
@@ -258,14 +265,17 @@
                 font-weight: 300;
                 font-size: 1rem;
                 font-family: $primaryfont;
+                
                 &--submit{
                     @extend .button;
                     margin: 5px 0;
+                    
     
                 }
                 &--message{
                     height: 300px;
                 }
+                
             }      
         }
         .info{

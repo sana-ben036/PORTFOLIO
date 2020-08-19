@@ -3,41 +3,104 @@ header{
     @include position (sticky,0,0,0);
     z-index: 2;
     width: 100%;
-    height: 120px;
+    max-height: 120px;
     padding:  10px ;
     background-color: $color7;
     
     .logo{
         min-width: 10%;
         &_img{
-            width: 68%;
+            width: 50%;
             
         }
 
     }
     .navbar{
-        width: 80%;
+        width: 90%;
+        .icon{
+            display:none;
+            float: right;
+            margin: 30px 0; 
+            .click{
+                border: 2px solid $color8;
+                border-radius: 5px;
+                background-color: $color7;
+                img{
+                    width: 50%;
+                    margin-top: 4px;
+                }
+            }
+            @media screen and (max-width: 620px ){
+                display: flex;
+            }
+        }
         .nav{
             width: 50%;
             height: 100px;
+            justify-content: space-around;
             margin:  auto ;
+            
             @include flex (flex,row,wrap);
-            &_item{
-                margin:40px auto ;
-                text-transform: uppercase;    
-                font-weight: 400;
+            @media screen and (max-width: 1150px ){
+                width: 60% ;
+                //margin: auto 0;
                 
             }
-            &_link{
+            @media screen and (max-width: 920px ){
+                width: 70% ;
+                //margin: auto 0;
+                
+            }
+            @media screen and (max-width: 800px ){
+                width: 100% ;
+                margin: auto 0;
+                
+            }
+            @media screen and (max-width: 620px ){
+                display:none;
+                
+            }
+            &_item{
+                width: auto;
+                height: auto;
+                margin:40px 0 ;
+                text-transform: uppercase;    
+                font-weight: 400;
                 text-decoration: none;
                 color: $color6; 
                 &:hover {
                     color: $color9;    
                 }
-                
+        
             }
         }
 
     }
     
 }
+
+.menu{
+    display: none;
+    background-color: $color7;
+    z-index: 4;
+    height: 280px;
+    @include position (absolute,120,0,0);
+    @media screen and (min-width: 620px ){
+        display:none;
+        
+    }
+    .nav{
+        @include flex (flex,column,nowrap);
+        width: 50%;
+        text-align: center;
+        margin: 15px auto;
+        &_item{
+            @extend .item;
+        }
+    }
+    
+    
+}
+  
+
+
