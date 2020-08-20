@@ -9,14 +9,15 @@ header{
     
     .logo{
         min-width: 10%;
-        &_img{
+        img{
             width: 50%;
+            //margin: 20px auto;
             
         }
 
     }
     .navbar{
-        width: 90%;
+        width: 80%;
         .icon{
             display:none;
             float: right;
@@ -100,6 +101,18 @@ header{
     }
     
     
+}
+
+.login-nav{
+    width: 100%;
+    .home{
+        float: right;
+        img{
+            margin:20px 0;
+
+        }
+        
+    }
 }
   
 

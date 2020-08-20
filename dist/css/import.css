@@ -8,19 +8,19 @@ body {
   background-color: #212121;
   font-size: 1rem; }
 
-.section, .section-portfolio, .section-about, .section-skills, .section-contact {
+.section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
   width: 70%;
   height: auto;
   margin: 20px auto;
   padding: 10px 0; }
   @media screen and (max-width: 1260px) {
-    .section, .section-portfolio, .section-about, .section-skills, .section-contact {
+    .section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
       width: 90%; } }
   @media screen and (max-width: 450px) {
-    .section, .section-portfolio, .section-about, .section-skills, .section-contact {
+    .section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
       width: 98%; } }
 
-.section-title, .section-portfolio .title, .section-about .title, .section-skills .right .title, .section-contact .title {
+.section-title, .section-portfolio .title, .section-about .title, .section-skills .right .title, .section-contact .title, .section-login .contenair .title {
   height: 40px;
   margin: 10px auto;
   color: #ffffff;
@@ -28,7 +28,7 @@ body {
   font-family: "Caveat Brush", cursive;
   font-size: 2rem; }
 
-.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair {
+.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair, .section-login .contenair {
   width: 100%;
   min-height: 530px;
   margin: 40px auto;
@@ -94,10 +94,10 @@ header {
   background-color: #ffffff; }
   header .logo {
     min-width: 10%; }
-    header .logo_img {
+    header .logo img {
       width: 50%; }
   header .navbar {
-    width: 90%; }
+    width: 80%; }
     header .navbar .icon {
       display: none;
       float: right;
@@ -163,6 +163,13 @@ header {
     width: 50%;
     text-align: center;
     margin: 15px auto; }
+
+.login-nav {
+  width: 100%; }
+  .login-nav .home {
+    float: right; }
+    .login-nav .home img {
+      margin: 20px 0; }
 
 .section-home {
   height: 650px;
@@ -348,6 +355,40 @@ header {
     .section-contact .contenair .info_item p {
       margin: 5px 0;
       line-height: 1.5; }
+
+.section-login {
+  height: 537px; }
+  .section-login .contenair {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; }
+    .section-login .contenair .form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      color: #cccccc;
+      width: 60%;
+      margin: 20px auto; }
+      .section-login .contenair .form_item {
+        width: 350px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; }
+        .section-login .contenair .form_item input {
+          height: 40px;
+          border-radius: 5px;
+          border: none;
+          margin: 5px 0; }
+        .section-login .contenair .form_item--valid {
+          width: 100px; }
+          .section-login .contenair .form_item--valid input {
+            text-transform: uppercase;
+            color: #495057;
+            background-color: #bac964; }
+            .section-login .contenair .form_item--valid input:hover {
+              color: #ffffff;
+              background-color: #495057; }
 
 footer {
   width: 100%;
