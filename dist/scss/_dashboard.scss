@@ -1,10 +1,11 @@
 
 .section-dashboard{
     @include flex (flex,row,nowrap);
-    height: 700px;
+    min-height: 700px;
     .aside{
         width: 15%;
         background-color: $color5;
+
         .asidebar{
             @include flex (flex,column,nowrap);
             padding: 20px 10px;
@@ -13,9 +14,24 @@
                 font-size: 1.2rem;
                 text-decoration: none;
                 color: $color7;
+                @media screen and (max-width: 800px ){
+                    display:none;
+                    
+                }
                 &--logout{
                     color: $color10;
                 }
+            }
+            &_icon{
+                padding: 5px;
+                text-align: center;
+                @media screen and (min-width: 800px ){
+                    display:none;   
+                }
+                &:link{
+                    color: $color7;
+                }
+
             }
 
         }
@@ -23,7 +39,7 @@
     .contenair{
         width: 85%;
         padding: 10px;
-        @include flex (flex,column,wrap);
+        @include flex (flex,column,nowrap);
         .title{
             color: $color7;
             font-style: italic;
@@ -37,6 +53,12 @@
             margin: 50px 0;
             padding: 20px 10px;
             border-radius: 10px;
+            @media screen and (max-width: 800px ){
+                width: 80%;  
+            }
+            @media screen and (max-width: 560px ){
+                width: 100%;  
+            }
             &_item{
                 width: 100%;
                 margin: 10px auto;
@@ -54,9 +76,10 @@
                 &--add{
                     width: 30%;
                     margin-left: 0;
-                    background-color: $color9;
+                    background-color: $color5;
                     text-transform: uppercase;
                     font-weight: 300;
+                    color: $color7;
                 }
             }
 
@@ -68,6 +91,9 @@
             color: $color7;
             text-align: center;
             border-collapse: collapse;
+            @media screen and (max-width: 560px ){
+                width: 100%;  
+            }
             th,td{
                 border-bottom: 1px solid $color3;
                 border-bottom-color: $color3;

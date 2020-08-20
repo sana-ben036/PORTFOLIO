@@ -97,7 +97,7 @@ header {
     header .logo img {
       width: 50%; }
   header .navbar {
-    width: 80%; }
+    width: 90%; }
     header .navbar .icon {
       display: none;
       float: right;
@@ -169,7 +169,11 @@ header {
   .nav-dashboard .nav_item, .nav-login .nav_item {
     float: right; }
     .nav-dashboard .nav_item img, .nav-login .nav_item img {
-      margin-top: -20px; }
+      margin-top: -20px;
+      margin-left: 20px;
+      width: 50%; }
+    .nav-dashboard .nav_item p, .nav-login .nav_item p {
+      text-align: center; }
 
 .section-home {
   height: 650px;
@@ -394,7 +398,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 700px; }
+  min-height: 700px; }
   .section-dashboard .aside {
     width: 15%;
     background-color: #2c3e50; }
@@ -408,14 +412,25 @@ header {
         font-size: 1.2rem;
         text-decoration: none;
         color: #ffffff; }
+        @media screen and (max-width: 800px) {
+          .section-dashboard .aside .asidebar_item {
+            display: none; } }
         .section-dashboard .aside .asidebar_item--logout {
           color: #ffffff91; }
+      .section-dashboard .aside .asidebar_icon {
+        padding: 5px;
+        text-align: center; }
+        @media screen and (min-width: 800px) {
+          .section-dashboard .aside .asidebar_icon {
+            display: none; } }
+        .section-dashboard .aside .asidebar_icon:link {
+          color: #ffffff; }
   .section-dashboard .contenair {
     width: 85%;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap; }
+    flex-wrap: nowrap; }
     .section-dashboard .contenair .title {
       color: #ffffff;
       font-style: italic; }
@@ -429,6 +444,12 @@ header {
       margin: 50px 0;
       padding: 20px 10px;
       border-radius: 10px; }
+      @media screen and (max-width: 800px) {
+        .section-dashboard .contenair .form {
+          width: 80%; } }
+      @media screen and (max-width: 560px) {
+        .section-dashboard .contenair .form {
+          width: 100%; } }
       .section-dashboard .contenair .form_item {
         width: 100%;
         margin: 10px auto;
@@ -444,15 +465,19 @@ header {
         .section-dashboard .contenair .form_item--add {
           width: 30%;
           margin-left: 0;
-          background-color: #bac964;
+          background-color: #2c3e50;
           text-transform: uppercase;
-          font-weight: 300; }
+          font-weight: 300;
+          color: #ffffff; }
     .section-dashboard .contenair table {
       width: 70%;
       margin: 20px auto;
       color: #ffffff;
       text-align: center;
       border-collapse: collapse; }
+      @media screen and (max-width: 560px) {
+        .section-dashboard .contenair table {
+          width: 100%; } }
       .section-dashboard .contenair table th, .section-dashboard .contenair table td {
         border-bottom: 1px solid #333333;
         border-bottom-color: #333333;

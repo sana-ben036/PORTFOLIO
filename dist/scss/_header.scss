@@ -17,7 +17,7 @@ header{
 
     }
     .navbar{
-        width: 80%;
+        width: 90%;
         .icon{
             display:none;
             float: right;
@@ -107,9 +107,16 @@ header{
     width: 100%;
     .nav_item{
         float: right;
+        
         img{
             margin-top: -20px;
+            margin-left: 20px;
+            width: 50%;
+            
 
+        }
+        p{
+            text-align: center;
         }
         
     }

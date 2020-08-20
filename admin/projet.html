@@ -16,7 +16,10 @@
         </div>
         <div class="navbar">
             <ul class="nav-dashboard">
-                <il class="nav_item" ><img src="/dist/img/Assets/user.png" alt="user"></il>
+                <il class="nav_item" >
+                    <img src="/dist/img/Assets/user.png" alt="user">
+                    <p>Username</p>
+                </il>
             </ul>
         </div>
  
@@ -24,21 +27,26 @@
     <!-- section -->
     <section class="section-dashboard">
         <aside class="aside">
-            <div class="asidebar">
+            <ul class="asidebar">
                 <a class="asidebar_item" href="dashboard.html">Accueil</a>
+                <a class="asidebar_icon" href="dashboard.html"><img src="/dist/img/Assets/home.png" alt="home"></a>
                 <hr>
                 <a class="asidebar_item" href="projet.html">Projet</a>
+                <a class="asidebar_icon" href="projet.html"><img src="/dist/img/Assets/folder (1).png" alt="folder"></a>
                 <hr>
                 <a class="asidebar_item" href="experience.html">Experience</a>
+                <a class="asidebar_icon" href="experience.html"><img src="/dist/img/Assets/university.png" alt="diploma"></a>
                 <hr>
                 <a class="asidebar_item asidebar_item--logout" href="/login.html">Logout</a>
+                <a class="asidebar_icon " href="/login.html"><img src="/dist/img/Assets/logout.png" alt="logout"></a>
                 
-            </div>
+            </ul>
 
         </aside>
         <div class="contenair">
             <div class="title">
                 <p>Ajouter un nouveau projet</p>
+                <hr>
             </div>
 
             <form class="form" action="" method="POST">
@@ -46,14 +54,15 @@
                 <input class="form_item" type="text" name="title" id="title" placeholder="Titre" required> 
                 <input class="form_item" type="url" name="url" id="url"  placeholder="Url" required> 
                 <select class="form_item form_item--cat" name="cat" id="cat">
-                    <option value=" ">-- Choisir un categorie --</option>
+                    <option value=" ">-- categorie --</option>
                 </select>
                 <input class="form_item" type="file" name="image" accept="image/png, image/jpeg">
-                <input class="form_item form_item--add" type="submit" name="add" value="Add Projet">
+                <input class="form_item form_item--add" type="submit" name="add" value="Ajouter">
             </form>
 
             <div class="title">
                 <p>la liste des projets</p>
+                <hr>
             </div>
 
             <table>
@@ -62,8 +71,7 @@
                         <th >Titre</th>
                         <th >Categorie</th>
                         <th >Date</th>
-                        <th >Action</th>
-                        <th >Action</th>
+                        <th  colspan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody>
