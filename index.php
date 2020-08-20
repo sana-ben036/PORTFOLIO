@@ -22,7 +22,7 @@
                 <a class="nav nav_item" href="#section-portfolio">portfolio</a>
                 <a class="nav nav_item" href="#section-about">à propos</a>
                 <a class="nav nav_item" href="#section-contact">contact</a>
-                <a class="nav nav_item" href="login.html">login</a>
+                <a class="nav nav_item" href="login.php">login</a>
             </ul>
             <!-- humbrgr menu -->
             <div class="icon">
@@ -41,7 +41,7 @@
             <a class="nav nav_item" href="#section-portfolio">portfolio</a>
             <a class="nav nav_item" href="#section-about">à propos</a>
             <a class="nav nav_item" href="#section-contact">contact</a>
-            <a class="nav nav_item" href="login.html">login</a>
+            <a class="nav nav_item" href="login.php">login</a>
         </ul>
         
 
@@ -82,12 +82,12 @@
             <!-- item-projet -->
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.html">
+                    <a href="details.php">
                         <img src="/dist/img/Assets/covid19.jpg" alt="corona">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.html">
+                    <a href="details.php">
                         <p>Corona virus test</p>
                     </a>
                 </div>
@@ -98,12 +98,12 @@
             <!-- item-projet -->
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.html">
+                    <a href="details.php">
                         <img src="/dist/img/Assets/medias.jpg" alt="media agency">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.html">
+                    <a href="details.php">
                         <p>Media space agency</p>
                     </a>
                 </div>
@@ -114,12 +114,12 @@
             <!-- item-projet -->
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.html">
+                    <a href="details.php">
                         <img src="/dist/img/Assets/covid19.jpg" alt="portfolio">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.html">
+                    <a href="details.php">
                         <p>Portfolio site</p>
                     </a>
                 </div>
@@ -130,12 +130,12 @@
             <!-- item-projet -->
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.html">
+                    <a href="details.php">
                         <img src="/dist/img/Assets/covid19.jpg" alt="corona">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.html">
+                    <a href="details.php">
                         <p>Corona virus test</p>
                     </a>
                 </div>
@@ -146,12 +146,12 @@
             <!-- item-projet -->
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.html">
+                    <a href="details.php">
                         <img src="/dist/img/Assets/medias.jpg" alt="media agency">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.html">
+                    <a href="details.php">
                         <p>Media space agency</p>
                     </a>
                 </div>
@@ -162,12 +162,12 @@
             <!-- item-projet -->
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.html">
+                    <a href="details.php">
                         <img src="/dist/img/Assets/covid19.jpg" alt="portfolio">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.html">
+                    <a href="details.php">
                         <p>Portfolio site</p>
                     </a>
                 </div>

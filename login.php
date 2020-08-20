@@ -17,7 +17,7 @@
         </div>
         <div class="navbar">
             <ul class="nav-login" >
-                <a class="nav_item"  href="index.html">Accueil</a>
+                <a class="nav_item"  href="index.php">Accueil</a>
             </ul>
             
         </div> 
