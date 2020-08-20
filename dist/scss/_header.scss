@@ -103,17 +103,17 @@ header{
     
 }
 
-.login-nav{
+.nav-dashboard,.nav-login{
     width: 100%;
-    .home{
+    .nav_item{
         float: right;
         img{
-            margin:20px 0;
+            margin-top: -20px;
 
         }
         
     }
+    
 }
-  
 
 

@@ -316,9 +316,10 @@
     
 }
 
+// login page :::::::::::::::::::::::::::::::::::::::::::
 .section-login{
     @extend .section;
-    height: 537px;
+    height: 560px;
     .contenair{
         @extend .section-contenair;
         @include flex (flex,column,wrap);
