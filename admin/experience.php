@@ -3,52 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/css/import.css">
+    <link rel="stylesheet" href="../dist/css/import.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <title>Experience</title>
 </head>
 <body>
     <!-- header -->
-    <header>
-        <div class="logo">
-            <img class="logo_img" src="/dist/img/Assets/logo.png" alt="logo" />
-        </div>
-        <div class="navbar">
-            <ul class="nav-dashboard">
-                <il class="nav_item" >
-                    <img src="/dist/img/Assets/user.png" alt="user">
-                    <p>Username</p>
-                </il>
-            </ul>
-        </div>
- 
-    </header>
-    
+    <?php include 'header.php'?>
+    <!-- section -->
     <section class="section-dashboard">
-        <aside class="aside">
-            <ul class="asidebar">
-                <a class="asidebar_item" href="dashboard.php">Accueil</a>
-                <a class="asidebar_icon" href="dashboard.php"><img src="/dist/img/Assets/home.png" alt="home"></a>
-                <hr>
-                <a class="asidebar_item" href="projet.php">Projet</a>
-                <a class="asidebar_icon" href="projet.php"><img src="/dist/img/Assets/folder (1).png" alt="folder"></a>
-                <hr>
-                <a class="asidebar_item" href="experience.php">Experience</a>
-                <a class="asidebar_icon" href="experience.php"><img src="/dist/img/Assets/university.png" alt="diploma"></a>
-                <hr>
-                <a class="asidebar_item asidebar_item--logout" href="/login.php">Logout</a>
-                <a class="asidebar_icon " href="/login.php"><img src="/dist/img/Assets/logout.png" alt="logout"></a>
-                
-            </ul>
-
-        </aside>
+        <!-- asidebar -->
+        <?php include 'aside.php'?>
+        <!-- manage experience -->
         <div class="contenair">
             <div class="title">
                 <p>Ajouter une nouvelle Experience</p>
                 <hr>
             </div>
-
+            <!-- add form -->
             <form class="form" action="" method="POST">
 
                 <input class="form_item" type="text" name="title"  placeholder="Periode" required> 
@@ -62,11 +35,13 @@
                 <input class="form_item form_item--add" type="submit" name="add" value="Ajouter">
             </form>
 
+
+            <!-- list of all  -->
             <div class="title">
                 <p>la liste des experiences</p>
                 <hr>
             </div>
-
+            
             <table>
                 <thead>
                     <tr>

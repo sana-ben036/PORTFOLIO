@@ -14,8 +14,9 @@
     <!-- header -->
     <header >
         <div class="logo">
-            <img src="/dist/img/Assets/logo.png" alt="logo" />
+            <img src="dist/img/Assets/logo.png" alt="logo" />
         </div>
+        <!-- desktop nav -->
         <div class="navbar">
             <ul class="nav">
                 <a class="nav nav_item" href="#section-home">accueil</a>
@@ -26,14 +27,12 @@
             </ul>
             <!-- humbrgr menu -->
             <div class="icon">
-                <button class="click" id="btn-menu"><img src="/dist/img/Assets/menu.png" alt="menu"></button>    
+                <button class="click" id="btn-menu"><img src="dist/img/Assets/menu.png" alt="menu"></button>    
             </div>
-        </div> 
-        
-        
+        </div>  
     </header>
 
-    <!-- nav mobil -->
+    <!-- mobile nav -->
     <div class="menu" id="menu">
         
         <ul class="nav" id="nav">
@@ -43,11 +42,8 @@
             <a class="nav nav_item" href="#section-contact">contact</a>
             <a class="nav nav_item" href="login.php">login</a>
         </ul>
-        
-
     </div>
-        
-    
+
     <!-- section-home -->
     <section class="section-home"  id="section-home" >
         <div class="name">
@@ -83,7 +79,7 @@
             <div class="projet">
                 <div class="projet_img">
                     <a href="details.php">
-                        <img src="/dist/img/Assets/covid19.jpg" alt="corona">
+                        <img src="dist/img/Assets/covid19.jpg" alt="corona">
                     </a>
                 </div>
                 <div class="projet_title">
@@ -99,7 +95,7 @@
             <div class="projet">
                 <div class="projet_img">
                     <a href="details.php">
-                        <img src="/dist/img/Assets/medias.jpg" alt="media agency">
+                        <img src="dist/img/Assets/medias.jpg" alt="media agency">
                     </a>
                 </div>
                 <div class="projet_title">
@@ -115,7 +111,7 @@
             <div class="projet">
                 <div class="projet_img">
                     <a href="details.php">
-                        <img src="/dist/img/Assets/covid19.jpg" alt="portfolio">
+                        <img src="dist/img/Assets/covid19.jpg" alt="portfolio">
                     </a>
                 </div>
                 <div class="projet_title">
@@ -131,7 +127,7 @@
             <div class="projet">
                 <div class="projet_img">
                     <a href="details.php">
-                        <img src="/dist/img/Assets/covid19.jpg" alt="corona">
+                        <img src="dist/img/Assets/covid19.jpg" alt="corona">
                     </a>
                 </div>
                 <div class="projet_title">
@@ -147,7 +143,7 @@
             <div class="projet">
                 <div class="projet_img">
                     <a href="details.php">
-                        <img src="/dist/img/Assets/medias.jpg" alt="media agency">
+                        <img src="dist/img/Assets/medias.jpg" alt="media agency">
                     </a>
                 </div>
                 <div class="projet_title">
@@ -163,7 +159,7 @@
             <div class="projet">
                 <div class="projet_img">
                     <a href="details.php">
-                        <img src="/dist/img/Assets/covid19.jpg" alt="portfolio">
+                        <img src="dist/img/Assets/covid19.jpg" alt="portfolio">
                     </a>
                 </div>
                 <div class="projet_title">
@@ -251,7 +247,7 @@
     <section class="section-skills" >
         <div class="left">
             <div class="photo">
-                <img src="/dist/img/Assets/pexels-anna-shvets-4482891.jpg" alt="photo">
+                <img src="dist/img/Assets/pexels-anna-shvets-4482891.jpg" alt="photo">
             </div>
         </div>
 
@@ -270,7 +266,7 @@
 
             </div>
             <div class="btn">
-                <a href="/dist/img/Pdf/cv sanae.pdf" download><button class="btn_element btn_element--cv">Télécharger CV</button></a>
+                <a href="dist/img/Pdf/cv sanae.pdf" download><button class="btn_element btn_element--cv">Télécharger CV</button></a>
             </div>
         </div>
     </section>

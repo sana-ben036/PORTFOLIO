@@ -13,7 +13,7 @@
         <!-- header -->
     <header>
         <div class="logo">
-            <img class="logo_img" src="/dist/img/Assets/logo.png" alt="logo" />
+            <img class="logo_img" src="dist/img/Assets/logo.png" alt="logo" />
         </div>
         <div class="navbar">
             <ul class="nav-login" >

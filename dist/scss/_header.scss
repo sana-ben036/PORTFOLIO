@@ -78,14 +78,16 @@ header{
 
     }
     
+    
 }
 
+// navbar for small width:::::::::::::::::::::::::::::::
 .menu{
     display: none;
     background-color: $color7;
     z-index: 4;
     height: 280px;
-    @include position (absolute,120,0,0);
+    @include position (absolute,100,0,0);
     @media screen and (min-width: 620px ){
         display:none;
         
@@ -102,6 +104,9 @@ header{
     
     
 }
+
+
+// navbar for login and dashbord:::::::::::::::::::::::::::::::
 
 .nav-dashboard,.nav-login{
     width: 100%;
