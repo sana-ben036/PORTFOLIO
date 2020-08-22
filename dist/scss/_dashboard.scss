@@ -1,7 +1,7 @@
 
 .section-dashboard{
     @include flex (flex,row,nowrap);
-    min-height: 700px;
+    min-height: 1000px;
     .aside{
         width: 15%;
         background-color: $color5;
@@ -59,6 +59,7 @@
             @media screen and (max-width: 560px ){
                 width: 100%;  
             }
+            
             &_item{
                 width: 100%;
                 margin: 10px auto;
@@ -99,7 +100,16 @@
                 border-bottom-color: $color3;
                 height: 50px;
                 padding: 10px;
+                a{
+                    text-decoration: none;
+                    color: $color9;
+                    :hover{
+                        font-weight: bold ;
+                        font-size: 1.2rem;
+                    }
+                }
             }
+            
             
         }
         

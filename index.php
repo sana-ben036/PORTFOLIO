@@ -1,9 +1,13 @@
+<?php require 'action.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="dist/css/import.css">
+    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 
@@ -279,12 +283,20 @@
         </div><br>
 
         <div class="contenair">
+            
             <form class="form" action="" method="POST">
+                <!-----------php/alert---------------->
+            <?php if(isset($_SESSION['message'])){ ;?>
+                <p class='alert alert_<?= $_SESSION['msg_type'];?>'>
+                    <b><?= $_SESSION['message'] ; ?></b></p>
+                <?php } unset($_SESSION['message']) ; ?>
+                
+                <!-----------php---------------------->
                 <input class="form_item" type="text" name="name" placeholder="Votre Nom" required>
                 <input class="form_item" type="email" name="email" placeholder="Votre Email" required>
                 <input class="form_item" type="tel" name="phone" placeholder="Votre Téléphone" required>
-                <textarea class="form_item form_item--message"  name="message"  placeholder="Ecrire un message"></textarea>
-                <input class=" form_item--submit" type="submit" name="submit" value="Envoyer">
+                <textarea class="form_item form_item--message"  name="message"  placeholder="Ecrire un message" minlength='100'></textarea>
+                <input class=" form_item--submit" type="submit" name="envoyer" value="Envoyer">
             </form>
 
             <div class="info">
@@ -317,7 +329,8 @@
 
 
 
-
+<!-- JS -->
 <script src="dist/js/script.js"></script>
+
 </body>
 </html>

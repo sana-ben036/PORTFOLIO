@@ -269,6 +269,7 @@
                 font-weight: 300;
                 font-size: 1rem;
                 font-family: $primaryfont;
+                color:$color7;
                 
                 &--submit{
                     @extend .button;
@@ -278,6 +279,7 @@
                 }
                 &--message{
                     height: 300px;
+                    
                 }
                 
             }      

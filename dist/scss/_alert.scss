@@ -1,0 +1,10 @@
+.alert{
+    font-weight: 300;
+    text-align: center;
+    &_danger{
+        color: $color9;
+    }
+    &_success{
+        color: $color7;
+    }
+}

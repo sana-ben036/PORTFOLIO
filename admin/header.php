@@ -1,3 +1,4 @@
+
 <header>
         <div class="logo" >
             <a href="../index.php">
@@ -9,7 +10,7 @@
             <ul class="nav-dashboard">
                 <il class="nav_item" >
                     <img src="../dist/img/Assets/user.png" alt="user">
-                    <p>Username</p>
+                    <p>admin</p>
                 </il>
             </ul>
         </div>
