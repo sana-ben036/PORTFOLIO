@@ -68,14 +68,14 @@
 
         <div class="sub-nav">
             <ul class="nav">
-                <a class=" nav nav_item" href="index.php?ca=all">All</a>
-                <a class=" nav nav_item" href="index.php?ca=design">Design</a>
-                <a class=" nav nav_item" href="index.php?ca=application">Application</a>
-                <a class=" nav nav_item" href="index.php?ca=site">Site Web</a>
+                <a class=" nav nav_item" href="#section-all">All</a>
+                <a class=" nav nav_item" href="#section-design">Design</a>
+                <a class=" nav nav_item" href="#section-application">Application</a>
+                <a class=" nav nav_item" href="#section-site">Site Web</a>
             </ul>
         </div><br>
 
-        <div class="contenair">
+        <div class="contenair" >
 
             <!-- item-projet -->
 
@@ -83,8 +83,8 @@
         <?php 
         // get data from db
 
-        $sth= $db->prepare($query);
-        $sth->bindParam(':ca',$ca);
+        $sth= $db->prepare("SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c ORDER BY date DESC");
+        //$sth->bindParam(':ca',$ca);
         $sth->execute();
         while ($row = $sth->fetch())
         {

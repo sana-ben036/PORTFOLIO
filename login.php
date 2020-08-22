@@ -21,7 +21,7 @@
         </div>
         <div class="navbar">
             <ul class="nav-login" >
-                <a class="nav_item"  href="/portfolio">Accueil</a>
+                <a class="home"  href="/portfolio"><img src="dist/img/Assets/home1.png" alt=""></a>
             </ul>
             
         </div> 
