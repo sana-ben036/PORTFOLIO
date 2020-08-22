@@ -84,7 +84,8 @@ body {
 }
 .section-contenair{
     width: 100%;
-    min-height: 530px;
+    height: auto;
+    //min-height: 330px;
     margin: 40px auto;
     //padding: 2% 0;
     @include flex (flex,row,wrap);

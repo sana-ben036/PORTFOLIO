@@ -30,7 +30,7 @@ body {
 
 .section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair, .section-login .contenair {
   width: 100%;
-  min-height: 530px;
+  height: auto;
   margin: 40px auto;
   display: flex;
   flex-direction: row;

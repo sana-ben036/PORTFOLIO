@@ -21,7 +21,7 @@
         </div>
         <div class="navbar">
             <ul class="nav-login" >
-                <a class="nav_item"  href="index.php">Accueil</a>
+                <a class="nav_item"  href="/portfolio">Accueil</a>
             </ul>
             
         </div> 

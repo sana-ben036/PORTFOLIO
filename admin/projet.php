@@ -41,7 +41,7 @@
                 <label for="url">Url :</label>
                 <input class="form_item" type="url" name="url" value='<?= $url; ?>' id="url" required> 
                 <select  class="form_item form_item--cat" name="cat" >
-                    <option value="<?= $categorie; ?>">-- Categorie --</option>
+                    <option value="">--- Categorie <?= $categorie; ?></option>
 
                     <!--------php --------------------->
                     

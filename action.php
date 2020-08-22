@@ -6,12 +6,38 @@ require 'connect.php';
 // declarer session
 session_start();
 
-// fonction pr tester les input
+// fonction pr securiser les input
 function valid_data($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
+}
+
+
+if(isset($_GET['ca'])){
+
+    $ca=$_GET['ca'];
+
+    if($ca == 'design')
+    {
+    $query= "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Design' ORDER BY date DESC";
+    }
+    elseif($ca == 'application')
+    {
+     $query= "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Application' ORDER BY date DESC";
+    }
+    elseif($ca == 'site')
+    {
+     $query= "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Website' ORDER BY date DESC";
+    }
+    
+    else{
+     $query= "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c ORDER BY date DESC";
+    }
+
+    
+
 }
 
 // script for login :::::::::::::::::::::::::::::::::::::
@@ -79,7 +105,7 @@ function valid_data($data){
     $sth->execute();
     */
     $_SESSION['message']= "Message est bien envoyé !";
-    $_SESSION['msg_type']= "success";
+    $_SESSION['msg_type']= "danger";
     
     }
 
@@ -102,7 +128,7 @@ function valid_data($data){
         $url= valid_data($_POST['url']);
         $categorie= valid_data($_POST['cat']);
         $image= $_FILES['image']['name'];
-        $upload="../dist/img/Assets/".$image;
+        $upload="uploads/".$image;
     
          //insert values in  db
         $sth = $db->prepare("
@@ -147,8 +173,8 @@ if(isset($_GET['delete'])){
 
     //header(""LOCATION:projet.php");
 
-    $_SESSION['message']= "Un projet est suprimé !";
-    $_SESSION['msg_type']= "success";
+    $_SESSION['message']= "Une ligne est bien suprimée !";
+    $_SESSION['msg_type']= "danger";
 
 }
 
@@ -183,7 +209,7 @@ if(isset($_GET['delete'])){
 
     if(isset($_POST['update-projet'])){
     
-        //show details post befor update it
+        //valider new details for update 
         $id = $_POST['id'];
         $title = valid_data($_POST['title']);
         $url= valid_data ($_POST['url']);
@@ -193,7 +219,7 @@ if(isset($_GET['delete'])){
         // to change and upload new image 
         if(isset($_FILES['image']['name']) && ($_FILES['image']['name'] != " ")){
     
-            $newimage="../dist/img/Assets/".$_FILES['image']['name'];
+            $newimage="uploads/".$_FILES['image']['name'];
             unlink($oldimage);
             move_uploaded_file($_FILES['image']['tmp_name'],$newimage);
     
@@ -209,17 +235,135 @@ if(isset($_GET['delete'])){
         $sth->bindParam(5,$id);
         $sth->execute();
     
-        $_SESSION['message']= " le projet est bien modifié!";
-        $_SESSION['msg_type']= "success";
+        $_SESSION['message']= " Une ligne est bien modifiée!";
+        $_SESSION['msg_type']= "danger";
 
         //header(""LOCATION:projet.php");
 
     }
 
 
+// script for new experience :::::::::::::::::::::::::::::::::::::
+
+    $update = false;
+
+    $id=" ";
+    $periode=" ";
+    $profil=" ";
+    $desc=" ";
+    $lieu=" ";
+    $categorie=" ";
+    
+    
+    if(isset($_POST['add-experience'])){                    
+    
+        //test values on input
+        $periode =valid_data ($_POST['periode']);
+        $profil= valid_data($_POST['profil']);
+        $desc= valid_data($_POST['description']);
+        $lieu= valid_data($_POST['lieu']);
+        $categorie= valid_data($_POST['cat']);
+    
+         //insert values in  db
+        $sth = $db->prepare("
+        INSERT INTO experience (periode, profil, description, lieu, categorie)
+        VALUES(?,?,?,?,?)");
+        $sth->bindParam(1,$periode);
+        $sth->bindParam(2,$profil);
+        $sth->bindParam(3,$desc);
+        $sth->bindParam(4,$lieu);
+        $sth->bindParam(5,$categorie);
+        $sth->execute();
+    
+    
+        //$_SESSION['message']= " Une ligne est bien ajoutée !";
+        //$_SESSION['msg_type']= "success";
+
+        header("LOCATION:experience.php"); 
+    
+    }
+
+
+// script to delet experience ::::::::::::::::::::::::::::::::::
+
+if(isset($_GET['delete'])){
+
+    $id = $_GET['delete'];
+
+    // delete the experience from db
+    $sth=$db->prepare('DELETE FROM experience WHERE id_e= ? ')  ;
+    $sth->bindParam(1,$id);
+    $sth->execute();
+
+    //header(""LOCATION:projet.php");
+
+    $_SESSION['message']= "Une ligne est bien suprimée !";
+    $_SESSION['msg_type']= "danger";
+
+}
+
+// recuperer details d'experience in form::::::::::::::::::::::
+    
+    if(isset($_GET['edit'])){
+    
+        $id = $_GET['edit'];
+    
+        // select experience a modifier selon son id et recuperer ses  details 
+        $sth=$db->prepare('SELECT * FROM experience INNER JOIN category ON experience.categorie = category.id_c  WHERE id_e = ?')  ;
+        $sth->bindParam(1,$id);
+        $sth->execute();
+        while ($row = $sth->fetch())
+        {
+            $id=$row['id_e'];
+            $periode=$row['periode'];
+            $profil=$row['profil'];
+            $lieu=$row['lieu'];
+            $desc=$row['description'];
+            $categorie=$row['name'];
+    
+            $update = true;     // true ou false selon selon le choix : form vide  ou   recuperer les details de projet in input
+            
+        }
+
+    }
+
+    // edit details of experience
+
+    if(isset($_POST['update-experience'])){
+    
+        //valider new details to update 
+        $periode =valid_data ($_POST['periode']);
+        $profil= valid_data($_POST['profil']);
+        $lieu= valid_data($_POST['lieu']);
+        $desc= valid_data($_POST['description']);
+        $categorie= valid_data($_POST['cat']);
+        
+
+        //insert new details to db 
+        $sth=$db->prepare('UPDATE experience SET periode=?, profil=?, lieu=?, description=?, categorie=?  WHERE id_e = ? ')  ;
+
+        $sth->bindParam(1,$periode);
+        $sth->bindParam(1,$periode);
+        $sth->bindParam(2,$profil);
+        $sth->bindParam(3,$lieu);
+        $sth->bindParam(4,$desc);
+        $sth->bindParam(5,$categorie);
+        $sth->bindParam(6,$id);
+        $sth->execute();
+    
+        $_SESSION['message']= " Une ligne est bien modifiée!";
+        $_SESSION['msg_type']= "danger";
+
+        //header(""LOCATION:experience.php");
+
+    }
 
 
 
+// script select projet by category :::::::::::::::::::::::::::::::::::::
+
+
+    
 
 
 

@@ -56,8 +56,6 @@
         </div>
         <div class="profil">
             <h3>Developpeuse WEB</h3>
-            
-            
         </div>
 
     </section> 
@@ -70,114 +68,48 @@
 
         <div class="sub-nav">
             <ul class="nav">
-                <a class=" nav nav_item" href="#section-all">All</a>
-                <a class=" nav nav_item" href="#section-design">Design</a>
-                <a class=" nav nav_item" href="#section-application">Application</a>
-                <a class=" nav nav_item" href="#section-site">Site Web</a>
+                <a class=" nav nav_item" href="index.php?ca=all">All</a>
+                <a class=" nav nav_item" href="index.php?ca=design">Design</a>
+                <a class=" nav nav_item" href="index.php?ca=application">Application</a>
+                <a class=" nav nav_item" href="index.php?ca=site">Site Web</a>
             </ul>
-            
         </div><br>
-        <!-- item-list -->
-        <div class="contenair" id="section-all">
+
+        <div class="contenair">
+
             <!-- item-projet -->
+
+        <!--------php --------------------->
+        <?php 
+        // get data from db
+
+        $sth= $db->prepare($query);
+        $sth->bindParam(':ca',$ca);
+        $sth->execute();
+        while ($row = $sth->fetch())
+        {
+            ?>
             <div class="projet">
                 <div class="projet_img">
-                    <a href="details.php">
-                        <img src="dist/img/Assets/covid19.jpg" alt="corona">
+                    <a href="<?= $row['url'];?>">
+                        <img src="admin/<?= $row['image'];?>" alt="">
                     </a>
                 </div>
                 <div class="projet_title">
-                    <a href="details.php">
-                        <p>Corona virus test</p>
+                    <a href="<?= $row['url'];?>">
+                        <p><?= $row['titre'];?></p>
                     </a>
                 </div>
                 <div class="projet_type">
-                    <p>Design</p>
+                    <p><?= $row['name'];?></p>
                 </div>
-            </div>
-            <!-- item-projet -->
-            <div class="projet">
-                <div class="projet_img">
-                    <a href="details.php">
-                        <img src="dist/img/Assets/medias.jpg" alt="media agency">
-                    </a>
-                </div>
-                <div class="projet_title">
-                    <a href="details.php">
-                        <p>Media space agency</p>
-                    </a>
-                </div>
-                <div class="projet_type">
-                    <p>Application</p>
-                </div>
-            </div>
-            <!-- item-projet -->
-            <div class="projet">
-                <div class="projet_img">
-                    <a href="details.php">
-                        <img src="dist/img/Assets/covid19.jpg" alt="portfolio">
-                    </a>
-                </div>
-                <div class="projet_title">
-                    <a href="details.php">
-                        <p>Portfolio site</p>
-                    </a>
-                </div>
-                <div class="projet_type">
-                    <p>Site web</p>
-                </div>
-            </div>
-            <!-- item-projet -->
-            <div class="projet">
-                <div class="projet_img">
-                    <a href="details.php">
-                        <img src="dist/img/Assets/covid19.jpg" alt="corona">
-                    </a>
-                </div>
-                <div class="projet_title">
-                    <a href="details.php">
-                        <p>Corona virus test</p>
-                    </a>
-                </div>
-                <div class="projet_type">
-                    <p>Design</p>
-                </div>
-            </div>
-            <!-- item-projet -->
-            <div class="projet">
-                <div class="projet_img">
-                    <a href="details.php">
-                        <img src="dist/img/Assets/medias.jpg" alt="media agency">
-                    </a>
-                </div>
-                <div class="projet_title">
-                    <a href="details.php">
-                        <p>Media space agency</p>
-                    </a>
-                </div>
-                <div class="projet_type">
-                    <p>Application</p>
-                </div>
-            </div>
-            <!-- item-projet -->
-            <div class="projet">
-                <div class="projet_img">
-                    <a href="details.php">
-                        <img src="dist/img/Assets/covid19.jpg" alt="portfolio">
-                    </a>
-                </div>
-                <div class="projet_title">
-                    <a href="details.php">
-                        <p>Portfolio site</p>
-                    </a>
-                </div>
-                <div class="projet_type">
-                    <p>Site web</p>
-                </div>
-            </div>   
+            </div> 
+            <?php 
+        }  
+        ?> 
+    <!--------php --------------------->
         </div>
 
-        
     </section> 
 
     <!-- section-about -->
@@ -193,26 +125,23 @@
                     <p>Education</p>
                 </div>
                 <!-- list_item -->
+    <!--------php --------------------->
+    <?php 
+        // get data from db
+        $sth= $db->query('SELECT * FROM experience INNER JOIN category ON experience.categorie = category.id_c WHERE name = "Diploma"' );
+        while ($row = $sth->fetch())
+        {
+            ?>
                 <div class="list_item">
-                    <p class="date">Octobre 2019 - Présent</p>
-                    <p class="profil">Développement Web</p>
-                    <p class="detail">Apprenante en première année, formation professionnelle en développement web.</p>
-                    <p class="lieu">Youcode - Youssoufia</p>
+                    <p class="date"><?= $row['periode'] ?></p>
+                    <p class="profil"><?= $row['profil'] ?></p>
+                    <p class="detail"><?= $row['description'] ?></p>
+                    <p class="lieu"><?= $row['lieu'] ?></p>
                 </div>
-                <!-- list_item -->
-                <div class="list_item">
-                    <p class="date">Septembre 2005 - Juillet 2007</p>
-                    <p class="profil">Réseaux et Systèmes Informatiques</p>
-                    <p class="detail">Diplôme de Technicienne spécialisée en Réseaux & systèmes informatiques.</p>
-                    <p class="lieu">ISTA - Marrakech</p>
-                </div>
-                <!-- list_item -->
-                <div class="list_item">
-                    <p class="date">Septembre 2002 - Juillet 2005</p>
-                    <p class="profil">Economie et Gestion</p>
-                    <p class="detail">Deuxième année universitaire en sciences économiques et techniques de gestion.</p>
-                    <p class="lieu">Université Cadi Ayyad - Marrakech</p>
-                </div>
+                <?php 
+        }  
+    ?> 
+    <!--------php --------------------->
             </div>
 
             <!-- list -->
@@ -221,26 +150,23 @@
                     <p>Experience</p>
                 </div>
                 <!-- list_item -->
+    <!--------php --------------------->
+    <?php 
+        // get data from db
+        $sth= $db->query('SELECT * FROM experience INNER JOIN category ON experience.categorie = category.id_c WHERE name = "Job"' );
+        while ($row = $sth->fetch())
+        {
+            ?>
                 <div class="list_item">
-                    <p class="date">Juillet 2020 - Présent</p>
-                    <p class="profil">Intégratrice Web</p>
-                    <p class="detail">Stage de renforcement des compétences acquises pendant la formation et répondre au besoin du cabinet.</p>
-                    <p class="lieu">OCIAEJ - Marrakech</p>
+                    <p class="date"><?= $row['periode'] ?></p>
+                    <p class="profil"><?= $row['profil'] ?></p>
+                    <p class="detail"><?= $row['description'] ?></p>
+                    <p class="lieu"><?= $row['lieu'] ?></p>
                 </div>
-                <!-- list_item -->
-                <div class="list_item">
-                    <p class="date">Septembre 2009 - Novembre 2019</p>
-                    <p class="profil">Assistante de direction</p>
-                    <p class="detail">La gestion du contenu et le suivie des  projets de nos clients au maroc.</p>
-                    <p class="lieu">Nuzum Global-IT solution - Marrakech</p>
-                </div>
-                <!-- list_item -->
-                <div class="list_item">
-                    <p class="date">Janvier 2009 - Juin 2009</p>
-                    <p class="profil">Technicienne Informatique</p>
-                    <p class="detail">Réalisation des plants destinés aux travaux topographiques et cadastraux.</p>
-                    <p class="lieu">SRTTC - Marrakech</p>
-                </div>
+                <?php 
+        }  
+    ?> 
+    <!--------php --------------------->
             </div>
         </div>
             
@@ -302,22 +228,32 @@
             <div class="info">
                 <div class="info_title">
                     <p>information de contact</p>
-
                 </div>
+
+        <!--------php --------------------->
+        <?php 
+        // get data from db
+        $sth= $db->query('SELECT * FROM admin ' );
+        while ($row = $sth->fetch())
+        {
+            ?>
                 <div class="info_item">
                     <span>email</span>
-                    <p>sana.bengannoune@gmail.com</p> 
+                    <p><?= $row['email'] ?></p> 
                 </div>
                 <div class="info_item">
                     <span>phone</span>
-                    <p>+212 633 995 356</p> 
+                    <p><?= $row['phone'] ?></p> 
                 </div>
                 <div class="info_item">
                     <span>adresse</span>
-                    <p>Youssoufia , MA <br>
-                        Cité Laghdir
-                        N° 414  </p> 
+                    <p><?= $row['ville'] ?><br>
+                        <?= $row['adresse'] ?>  
+                    </p> 
                 </div>
+            <?php
+        }
+        ?>
 
             </div>
         </div>
