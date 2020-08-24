@@ -1,0 +1,48 @@
+// login page :::::::::::::::::::::::::::::::::::::::::::
+.section-login{
+    @extend .section;
+    height: 564px;
+    .contenair{
+        @extend .section-contenair;
+        @include flex (flex,column,wrap);
+        .title{
+            @extend .section-title;
+        }
+        .form{
+            @include flex (flex,column,wrap);
+            color: $color8;
+            width: 60%;
+            margin: 20px auto;
+            &_item{
+                width: 350px;
+                margin: 10px auto;
+                @include flex (flex,column,wrap);
+                input{
+                    height: 40px;
+                    border-radius: 5px;
+                    border: none;
+                    margin: 5px 0;
+
+                }
+                &--valid{
+                    width: 100px;
+                    input{
+                        text-transform: uppercase;
+                        color: $color7;
+                        background-color: $color6;
+                        border: 2px solid $color7 ;
+                        
+                        &:hover{
+                            color:$color6 ;
+                            background-color: $color9;
+                            border: 2px solid $color6 ; 
+                        }
+                    }
+                    
+                }
+            }
+
+
+        }
+    }
+}

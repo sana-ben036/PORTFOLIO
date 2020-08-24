@@ -85,7 +85,7 @@
 
             <!-- list of all  -->
             <div class="title">
-                <p>la liste des experiences</p>
+                <p>La liste des Experiences enregistrés</p>
                 <hr>
             </div>
             

@@ -10,7 +10,7 @@
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
+    <title>Projet</title>
 </head>
 <body>
     <!-- header -->
@@ -28,7 +28,7 @@
                 <?php } unset($_SESSION['message']) ; ?>
             <!-----------php---------------------->
             <div class="title">
-                <p>Ajouter un nouveau projet</p>
+                <p>Ajouter un nouveau Projet</p>
                 <hr>
                 
             </div>
@@ -40,7 +40,7 @@
                 <input class="form_item" type="text" name="title" value='<?= $title; ?>'  id=" title" required> 
                 <label for="url">Url :</label>
                 <input class="form_item" type="url" name="url" value='<?= $url; ?>' id="url" required> 
-                <select  class="form_item form_item--cat" name="cat" >
+                <select  class="form_item form_item--cat" name="cat" required>
                     <option value="">--- Categorie <?= $categorie; ?></option>
 
                     <!--------php --------------------->
@@ -85,7 +85,7 @@
 
             <!-- list of all -->
             <div class="title">
-                <p>la liste des projets</p>
+                <p>La liste des Projets enregistrés</p>
                 <hr>
             </div>
 

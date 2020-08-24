@@ -14,6 +14,9 @@
                 font-size: 1.2rem;
                 text-decoration: none;
                 color: $color7;
+                &:hover{
+                    color: $color9;
+                }
                 @media screen and (max-width: 800px ){
                     display:none;
                     
@@ -28,9 +31,7 @@
                 @media screen and (min-width: 800px ){
                     display:none;   
                 }
-                &:link{
-                    color: $color7;
-                }
+                
 
             }
 
@@ -49,7 +50,7 @@
             background-color: $color3;
             @include flex (flex,column,wrap);
             color: $color8;
-            width: 50%;
+            width: 40%;
             margin: 50px 0;
             padding: 20px 10px;
             border-radius: 10px;
@@ -58,6 +59,7 @@
             }
             @media screen and (max-width: 560px ){
                 width: 100%;  
+                font-size: .8rem;
             }
             
             &_item{
@@ -81,6 +83,12 @@
                     text-transform: uppercase;
                     font-weight: 300;
                     color: $color7;
+                    text-align: center;
+                    border:1px solid $color7;
+                    @media screen and (max-width: 560px ){
+                        font-size: .8rem;
+                    }
+                    
                 }
             }
 
@@ -88,27 +96,34 @@
         }
         table{
             width: 70%;
-            margin: 20px auto;
+            margin: 50px auto;
             color: $color7;
             text-align: center;
             border-collapse: collapse;
             @media screen and (max-width: 560px ){
-                width: 100%;  
+                width: 100%; 
+                font-size: .8rem; 
             }
             th,td{
-                border-bottom: 1px solid $color3;
+                border-bottom: 2px solid $color3;
                 border-bottom-color: $color3;
                 height: 50px;
                 padding: 10px;
+                line-height: 1.5;
                 a{
                     text-decoration: none;
                     color: $color9;
-                    :hover{
-                        font-weight: bold ;
-                        font-size: 1.2rem;
-                    }
+                    
                 }
+    
             }
+            
+            
+            .data{
+                text-align: left;
+                color: $color8;
+            }
+            
             
             
         }

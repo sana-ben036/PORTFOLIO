@@ -15,30 +15,6 @@ function valid_data($data){
 }
 
 
-if(isset($_GET['ca'])){
-
-    $ca=$_GET['ca'];
-
-    if($ca == 'design')
-    {
-    $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Design' ORDER BY date DESC";
-    }
-    elseif($ca == 'application')
-    {
-     $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Application' ORDER BY date DESC";
-    }
-    elseif($ca == 'site')
-    {
-     $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Website' ORDER BY date DESC";
-    }
-    
-    else{
-     $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c ORDER BY date DESC";
-    }
-
-    
-
-}
 
 // script for login :::::::::::::::::::::::::::::::::::::
 
@@ -362,9 +338,36 @@ if(isset($_GET['delete'])){
 
 // script select projet by category :::::::::::::::::::::::::::::::::::::
 
+if(isset($_GET['ca'])){
+
+    $ca=$_GET['ca'];
+
+    if($ca == 'design')
+    {
+    $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Design' ORDER BY date DESC";
+    }
+    elseif($ca == 'application')
+    {
+     $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Application' ORDER BY date DESC";
+    }
+    elseif($ca == 'site')
+    {
+     $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c WHERE name ='Website' ORDER BY date DESC";
+    }
+    
+    else{
+     $query = "SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c ORDER BY date DESC";
+    }
 
     
 
+}
+    
+
+
+// recuperer les info personnelles in form::::::::::::::::::::::
+    
+    
 
 
 

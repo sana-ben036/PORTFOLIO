@@ -1,14 +1,17 @@
-// section ::::::::::::::::::::::
+//::::::::::::::::::: home ::::::::::::::::::::::
 .section-home{
+    position: relative;
     height: 650px;
-    padding: 20px;
-    background-image: url(/dist/img/Assets/home-bg-2.jpg);
-    
+    padding: 20px;   
+}
+
+.section-presentation{
+
+    @include position (absolute,170px,0,0);
     .name{
         width: auto;
-        margin-top: 100px;
         margin-left: 10%;
-        color:$color6;
+        color:$color7;
         font-family: $secondaryfont;
         font-size: 3rem;
         @media screen and (max-width: 960px ){
@@ -18,18 +21,27 @@
     .profil{
         text-align: center;
         width: auto;
-        margin-top: 200px;
-        margin-left: 50%;
-        font-family: $secondaryfont;
-        color:$color3;
-        font-size: 2rem;
+        margin-top: 300px;
+        margin-left: 60%;
+        padding: 5px;
+        font-family: $primaryfont;
+        color:$color10;
+        font-style: italic;
+        font-size: .8rem;
+        text-decoration: underline $color10;
+        text-transform: uppercase;
         @media screen and (max-width: 960px ){
-            font-size: 1.5rem;  
+            margin-left: 40%; 
         }
         
+        
     }
+
 }
 
+
+
+//::::::::::::::::::: portfolio ::::::::::::::::::::::
 
 .section-portfolio{
     @extend .section;
@@ -99,6 +111,10 @@
         }
     }
 }
+
+
+
+//::::::::::::::::::: a popos  ::::::::::::::::::::::
 
 .section-about{
     @extend .section;
@@ -175,6 +191,9 @@
         }
     }   
 }
+
+
+//::::::::::::::::::: skills ::::::::::::::::::::::
 .section-skills{
     @extend .section;
     @include flex (flex,row,wrap);
@@ -203,20 +222,7 @@
                     text-align: center;   
                 }
                 &_element{
-                    @extend .button;
-                    
-                    &--cv{
-                        background-color: $color6;
-                        &:hover{
-                            color:$color6 ;
-                            background-color: $color7;
-                        }
-                        
-                        
-                        
-
-                    }
-                    
+                    @extend .button;  
                 }
                 
             }
@@ -232,18 +238,16 @@
                 border-radius: 10px;
                 @media screen and (max-width: 900px ){
                     //width: 90% ;    
-                }
-
-                
-                
-                
-                
+                }   
             }
         }
     
     
 
 }
+
+
+//::::::::::::::::::: contact ::::::::::::::::::::::
 
 .section-contact{
     @extend .section;
@@ -299,7 +303,7 @@
                 span{
                     text-transform: uppercase;
                     color: $color5;
-                    font-weight: 300;
+                    font-weight: bold;
                     margin: 5px 0;
 
                 }
@@ -309,59 +313,12 @@
                 }
             }
         }
-            
-            
 
     }
     
 }
 
-// login page :::::::::::::::::::::::::::::::::::::::::::
-.section-login{
-    @extend .section;
-    height: 560px;
-    .contenair{
-        @extend .section-contenair;
-        @include flex (flex,column,wrap);
-        .title{
-            @extend .section-title;
-        }
-        .form{
-            @include flex (flex,column,wrap);
-            color: $color8;
-            width: 60%;
-            margin: 20px auto;
-            &_item{
-                width: 350px;
-                margin: 10px auto;
-                @include flex (flex,column,wrap);
-                input{
-                    height: 40px;
-                    border-radius: 5px;
-                    border: none;
-                    margin: 5px 0;
 
-                }
-                &--valid{
-                    width: 100px;
-                    input{
-                        text-transform: uppercase;
-                        color:$color6 ;
-                            background-color: $color9;
-                        &:hover{
-                            color: $color7;
-                            background-color: $color6;
-                            
-                        }
-                    }
-                    
-                }
-            }
-
-
-        }
-    }
-}
 
 
 

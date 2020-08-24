@@ -13,9 +13,8 @@
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css" media="all">
     
-    <title>Dashboard</title>
+    <title>Accueil</title>
 </head>
 <body>
     <!-- header -->
@@ -26,38 +25,121 @@
         <?php include 'aside.php'?>
 
         <div class="contenair">
+            <div class="contenair">
+            <!-----------php/alert---------------->
+            <?php if(isset($_SESSION['message'])){ ;?>
+                <p class='alert alert_<?= $_SESSION['msg_type'];?>'>
+                    <b><?= $_SESSION['message'] ; ?></b></p>
+                <?php } unset($_SESSION['message']) ; ?>
+            <!-----------php---------------------->
             <div class="title">
                 <p><strong>Bienvenu sur Dashboard</strong> </p>
             </div>
-            <!-- integration horloge -->
-            <main class="main">
-                <div class="clockbox">
-                    <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
-                        <g id="face">
-                            <circle class="circle" cx="300" cy="300" r="253.9" />
-                            <path class="hour-marks"
-                                d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" />
-                            <circle class="mid-circle" cx="300" cy="300" r="16.2" />
-                        </g>
-                        <g id="hour">
-                            <path class="hour-arm" d="M300.5 298V142" />
-                            <circle class="sizing-box" cx="300" cy="300" r="253.9" />
-                        </g>
-                        <g id="minute">
-                            <path class="minute-arm" d="M300.5 298V67" />
-                            <circle class="sizing-box" cx="300" cy="300" r="253.9" />
-                        </g>
-                        <g id="second">
-                            <path class="second-arm" d="M300.5 350V55" />
-                            <circle class="sizing-box" cx="300" cy="300" r="253.9" />
-                        </g>
-                    </svg>
-                </div><!-- .clockbox -->
-            </main>
 
-        </div>
+            <!-- table info -->
+            <table >
+                <!-----------php---------------------->
+                <?php
+                $sth= $db->query("SELECT * FROM admin ");
+                while ($row = $sth->fetch())
+                    {
+                ?>
+                    <tr>
+                        <td>Photo</td>
+                        <td class='data' ><img src="<?=$row['photo']; ?>" width="100"></td>
+                    </tr>
+                    <tr>
+                        <td >Name</td>    
+                        <td class='data' id='data'><?=$row['name']; ?> </td>  
+                    </tr>
+                    <tr>
+                        <td >Profil</td> 
+                        <td class='data'><?=$row['profil']; ?></td>   
+                    </tr>
+                    <tr>
+                        <td >Email</td>
+                        <td class='data'><?=$row['email']; ?></td> 
+                    </tr>
+                    <tr>
+                        <td >Phone</td>
+                        <td class='data'><?=$row['phone']; ?></td> 
+                    </tr>
+                    <tr>
+                        <td >Ville</td>
+                        <td class='data'><?=$row['ville']; ?></td> 
+                    </tr>
+                    <tr>
+                        <td >Adresse</td>
+                        <td class='data'><?=$row['adresse']; ?></td> 
+                    </tr>
+                    <tr>
+                        <td >Skills</td>
+                        <td class='data'><?=$row['skills']; ?></td> 
+                    </tr>
+                    <tr>
+                        <td >Mot de passe</td>
+                        <td class='data'><?=$row['password']; ?></td> 
+                    </tr>
+
+                
+                <?php
+                    }
+                ?>
+                <tr>
+                    <td >&nbsp;</td> 
+                    <td id='edit'><a href="personel.php?" >Si vous voulez changer une information, click sur Edit!</a></td>
+                    </tr>
+            </table>
+
+
+            <!-- info form 
+            <form style='display:none;margin: 10px auto' id='info-form' class="form" action="" method='POST' enctype="multipart/form-data">
+        
+        
+                <label for="name">Name :</label>
+                <input class="form_item" type="text" name="name" value='<?= $row['name']; ?>'  id="name"> 
+                <label for="profil">Profil :</label>
+                <input class="form_item" type="text" name="profil" value='<?= $profil; ?>' id="profil"> 
+                <label for="email">Email :</label>
+                <input class="form_item" type="email" name="email" value='<?= $email; ?>' id="email"> 
+                <label for="phone">Phone :</label>
+                <input class="form_item" type="phone" name="phone" value='<?= $phone; ?>' id="phone"> 
+                <label for="ville">Ville :</label>
+                <input class="form_item" type="text" name="ville" value='<?= $ville; ?>' id="ville"> 
+                <label for="adresse">Adresse :</label>
+                <input class="form_item" type="text" name="adresse" value='<?= $adresse; ?>' id="adress"> 
+                <label for="password">Mot de passe :</label>
+                <input class="form_item" type="password" name="password" value='<?= $password; ?>' id="password"> 
+                <label for="skills">Skills :</label>
+                <textarea class="form_item form_item--text" type="text" name="skills"  id="skills"><?= $skilss; ?></textarea> 
+                <label for="image">Photo :</label>
+                <input type="hidden" name='oldimage' value='<?= $photo; ?>'>
+                <input class="form_item" type="file" name="image" id="image" accept="image/png, image/jpg" >
+                <img src="<?= $image; ?>" width='100' class='img-thumbnail'>
+                
+                
+                <input class="form_item form_item--add" type="submit" name="add-info" value="Enregister">
+
+                
+                    
+            </form> -->
+
+            
+            
+        </div>  
 
     </section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -71,9 +153,8 @@
     </footer>
 
 
-
-<script src="../dist/js/script.js"></script>
-<script src="script.js" defer></script>
+<!-- JS -->
+<script src="personel.js"></script>
     
 </body>
 </html>

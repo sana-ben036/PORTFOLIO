@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="dist/img/Assets/logo.png"/>
     <!-- CSS -->
     <link rel="stylesheet" href="dist/css/import.css">
     <!-- FONT -->
@@ -49,16 +50,20 @@
     </div>
 
     <!-- section-home -->
-    <section class="section-home"  id="section-home" >
+    <section style="background-image: url(dist/img/Assets/bg.jpg);opacity:30%" class="section-home"  id="section-home" >
+        
+    </section> 
+    <section class="section-presentation">
         <div class="name">
-            <h1>Bonjour, </h1>
+            <h1 >Bonjour, </h1>
             <h1>je suis Sana Bengannoune</h1>
         </div>
         <div class="profil">
-            <h3>Developpeuse WEB</h3>
+            <h3>Ici, vous découvrirez mon parcours</h3>
         </div>
 
-    </section> 
+    </section>
+        
 
     <!-- section-portfolio -->
     <section class="section-portfolio"  id="section-portfolio" >
@@ -175,9 +180,15 @@
     </section>
     <!-- section-skills -->
     <section class="section-skills" >
+        <!-----------php---------------------->
+        <?php
+                $sth= $db->query("SELECT * FROM admin ");
+                while ($row = $sth->fetch())
+                    {
+                ?>
         <div class="left">
             <div class="photo">
-                <img src="dist/img/Assets/pexels-anna-shvets-4482891.jpg" alt="photo">
+                <img src="admin/<?= $row['photo']  ;?>" alt="photo">
             </div>
         </div>
 
@@ -186,18 +197,15 @@
                 <p><strong>Soft</strong> Skills</p>
             </div>
             <div class="text">
-                <p>Je suis une personne responsable, disciplinée et 
-                    sociable.
-                    Grace à mes expériences, j'ai acquis l'esprit de travail
-                    collaboratif, de partage et d'écoute.  
-                    Actuellement je suis capable d'étre un membre positif au sein d'une 
-                    équipe afin de réaliser des objectifs.
-                    </p>
-
+                <p><?= $row['skills'] ;?></p>
             </div>
             <div class="btn">
-                <a href="dist/img/Pdf/cv sanae.pdf" download><button class="btn_element btn_element--cv">Télécharger CV</button></a>
+                <a href="admin/<?= $row['cv'] ;?>" download><button class="btn_element">Télécharger CV</button></a>
             </div>
+
+                    <?php
+                    }
+            ?>
         </div>
     </section>
 
