@@ -69,27 +69,23 @@
     <section class="section-portfolio"  id="section-portfolio" >
         <div class="title">
             <p><strong>Portfolio</strong> Professionel</p>
-        </div><br><br>
+        </div><br>
 
         <div class="sub-nav">
             <ul class="nav">
-                <a class=" nav nav_item" href="#section-all">All</a>
-                <a class=" nav nav_item" href="#section-design">Design</a>
-                <a class=" nav nav_item" href="#section-application">Application</a>
-                <a class=" nav nav_item" href="#section-site">Site Web</a>
+                <a id='menu-all' class=" nav nav_item" href="?ca=all">All</a>
+                <a id='menu-design' class=" nav nav_item" href="?ca=design">Design</a>
+                <a id='menu-application'class=" nav nav_item" href="?ca=application">Application</a>
+                <a id='menu-site' class=" nav nav_item" href="?ca=site">Site Web</a>
             </ul>
         </div><br>
 
         <div class="contenair" >
-
-            <!-- item-projet -->
-
-        <!--------php --------------------->
+                <!--------php --------------------->
         <?php 
         // get data from db
-
-        $sth= $db->prepare("SELECT * FROM projet INNER JOIN category ON projet.categorie = category.id_c ORDER BY date DESC");
-        //$sth->bindParam(':ca',$ca);
+        $sth= $db->prepare($query);
+        $sth->bindParam(':ca',$ca);
         $sth->execute();
         while ($row = $sth->fetch())
         {
@@ -121,7 +117,7 @@
     <section class="section-about"  id="section-about">
         <div class="title">
             <p><strong>À propos</strong> De Moi</p>
-        </div>
+        </div><br>
 
         <div class="contenair">
             <!-- list -->
@@ -195,7 +191,7 @@
         <div class="right">
             <div class="title">
                 <p><strong>Soft</strong> Skills</p>
-            </div>
+            </div><br>
             <div class="text">
                 <p><?= $row['skills'] ;?></p>
             </div>
@@ -212,7 +208,7 @@
     <!-- section-contact -->
     <section class="section-contact" id="section-contact">
         <div class="title">
-            <p><strong>Contacter</strong> Moi</p>
+            <p><strong>Contactez</strong> Moi</p>
 
         </div><br>
 

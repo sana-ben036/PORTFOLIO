@@ -25,8 +25,7 @@ body {
   margin: 10px auto;
   color: #ffffff;
   text-align: center;
-  font-family: "Caveat Brush", cursive;
-  font-size: 2rem; }
+  font-size: 1.7rem; }
 
 .section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair, .section-login .contenair {
   width: 100%;
@@ -207,9 +206,9 @@ header {
     margin-left: 60%;
     padding: 5px;
     font-family: "Montserrat", sans-serif;
-    color: #ffffff91;
+    color: #bac964;
     font-style: italic;
-    font-size: .8rem;
+    font-size: .7rem;
     text-decoration: underline #ffffff91;
     text-transform: uppercase; }
     @media screen and (max-width: 960px) {
@@ -233,7 +232,7 @@ header {
     .section-portfolio .sub-nav .nav_item {
       width: auto;
       text-decoration: none;
-      color: #cccccc; }
+      color: #ffffff91; }
       .section-portfolio .sub-nav .nav_item:hover {
         color: #bac964; }
 

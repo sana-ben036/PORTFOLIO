@@ -297,7 +297,7 @@ if(isset($_GET['delete'])){
             $desc=$row['description'];
             $categorie=$row['name'];
     
-            $update = true;     // true ou false selon selon le choix : form vide  ou   recuperer les details de projet in input
+            $update = true;     // true ou false pour changer le btn from add or update
             
         }
 
@@ -362,14 +362,73 @@ if(isset($_GET['ca'])){
     
 
 }
+
+
+
+
+  // recuperer details de projet in form::::::::::::::::::::::
     
-
-
-// recuperer les info personnelles in form::::::::::::::::::::::
+    if(isset($_POST['edit'])){
     
     
-
-
+        // select the post a modifier selon son id et recuperer les details de ce post
+        $sth=$db->query('SELECT * FROM admin ')  ;
+        while ($row = $sth->fetch())
+        {
+            $id=$row['id'];
+            $name=$row['name'];
+            $email=$row['email'];
+            $password=$row['password'];
+            $profil=$row['profil'];
+            $ville=$row['ville'];
+            $adresse=$row['adresse'];
+            $skills=$row['skills'];
+            $photo=$row['photo'];
+    
+            
+        }
+    
+        
+    
+    
+    }
+    
+        // edit details of projet
+    
+        if(isset($_POST['update-projet'])){
+        
+            //valider new details for update 
+            $id = $_POST['id'];
+            $title = valid_data($_POST['title']);
+            $url= valid_data ($_POST['url']);
+            $categorie=$_POST['cat'];
+            $oldimage= $_POST['oldimage'];
+        
+            // to change and upload new image 
+            if(isset($_FILES['image']['name']) && ($_FILES['image']['name'] != " ")){
+        
+                $newimage="uploads/".$_FILES['image']['name'];
+                unlink($oldimage);
+                move_uploaded_file($_FILES['image']['tmp_name'],$newimage);
+        
+            } else{
+                $newimage=$oldimage;
+            }
+        
+            $sth=$db->prepare('UPDATE projet SET titre=?,url=?,categorie=?,image=?  WHERE id_p = ? ')  ;
+            $sth->bindParam(1,$title);
+            $sth->bindParam(2,$url);
+            $sth->bindParam(3,$categorie);
+            $sth->bindParam(4,$newimage);
+            $sth->bindParam(5,$id);
+            $sth->execute();
+        
+            $_SESSION['message']= " Une ligne est bien modifiée!";
+            $_SESSION['msg_type']= "danger";
+    
+            //header(""LOCATION:projet.php");
+    
+        }
 
 
 ?>
