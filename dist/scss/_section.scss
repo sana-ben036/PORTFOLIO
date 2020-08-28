@@ -75,7 +75,7 @@
         @extend .section-contenair;
         
         .projet{
-            width: 295;
+            width: 295px;
             height: 310px;
             margin: 5px auto;
             //padding: 10px ;
@@ -109,6 +109,9 @@
                 margin-bottom: 10px ;
             }
         }
+    }
+    .none{
+        display: none;
     }
 }
 

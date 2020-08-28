@@ -237,7 +237,7 @@ header {
         color: #bac964; }
 
 .section-portfolio .contenair .projet {
-  width: 295;
+  width: 295px;
   height: 310px;
   margin: 5px auto;
   display: flex;
@@ -265,6 +265,9 @@ header {
     color: #495057;
     text-align: center;
     margin-bottom: 10px; }
+
+.section-portfolio .none {
+  display: none; }
 
 .section-about .contenair .list {
   width: 48%;

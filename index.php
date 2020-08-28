@@ -73,48 +73,20 @@
 
         <div class="sub-nav">
             <ul class="nav">
-                <a id='menu-all' class=" nav nav_item" href="?ca=all">All</a>
-                <a id='menu-design' class=" nav nav_item" href="?ca=design">Design</a>
-                <a id='menu-application'class=" nav nav_item" href="?ca=application">Application</a>
-                <a id='menu-site' class=" nav nav_item" href="?ca=site">Site Web</a>
+                <a id='menu-all' class=" nav nav_item" href="#all">All</a>
+                <a id='menu-design' class=" nav nav_item" href="#design">Design</a>
+                <a id='menu-application'class=" nav nav_item" href="#application">Application</a>
+                <a id='menu-site' class=" nav nav_item" href="#website">Site Web</a>
             </ul>
         </div><br>
 
-        <div class="contenair" >
-                <!--------php --------------------->
-        <?php 
-        // get data from db
-        $sth= $db->prepare($query);
-        $sth->bindParam(':ca',$ca);
-        $sth->execute();
-        while ($row = $sth->fetch())
-        {
-            ?>
-            <div class="projet">
-                <div class="projet_img">
-                    <a href="<?= $row['url'];?>">
-                        <img src="admin/<?= $row['image'];?>" alt="">
-                    </a>
-                </div>
-                <div class="projet_title">
-                    <a href="<?= $row['url'];?>">
-                        <p><?= $row['titre'];?></p>
-                    </a>
-                </div>
-                <div class="projet_type">
-                    <p><?= $row['name'];?></p>
-                </div>
-            </div> 
-            <?php 
-        }  
-        ?> 
-    <!--------php --------------------->
-        </div>
+        <!-- list projet -->
+        <?php include 'contenair.php'  ;?>
 
     </section> 
 
     <!-- section-about -->
-    <section class="section-about"  id="section-about">
+    <section class="section-about" >
         <div class="title">
             <p><strong>À propos</strong> De Moi</p>
         </div><br>

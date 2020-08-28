@@ -5,10 +5,10 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #212121;
   font-size: 1rem; }
 
 .section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
-  background-color: #212121;
   width: 70%;
   height: auto;
   margin: 20px auto;
@@ -25,8 +25,7 @@ body {
   margin: 10px auto;
   color: #ffffff;
   text-align: center;
-  font-family: "Caveat Brush", cursive;
-  font-size: 2rem; }
+  font-size: 1.7rem; }
 
 .section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair, .section-login .contenair {
   width: 100%;
@@ -182,30 +181,39 @@ header {
   float: right; }
 
 .section-home {
+  position: relative;
   height: 650px;
-  padding: 20px;
-  background-image: url(/dist/img/Assets/home-bg-2.jpg); }
-  .section-home .name {
+  padding: 20px; }
+
+.section-presentation {
+  position: absolute;
+  top: 170px;
+  left: 0;
+  right: 0; }
+  .section-presentation .name {
     width: auto;
-    margin-top: 100px;
     margin-left: 10%;
-    color: #495057;
+    color: #ffffff;
     font-family: "Caveat Brush", cursive;
     font-size: 3rem; }
     @media screen and (max-width: 960px) {
-      .section-home .name {
+      .section-presentation .name {
         font-size: 2rem; } }
-  .section-home .profil {
+  .section-presentation .profil {
     text-align: center;
     width: auto;
-    margin-top: 200px;
-    margin-left: 50%;
-    font-family: "Caveat Brush", cursive;
-    color: #333333;
-    font-size: 2rem; }
+    margin-top: 300px;
+    margin-left: 60%;
+    padding: 5px;
+    font-family: "Montserrat", sans-serif;
+    color: #bac964;
+    font-style: italic;
+    font-size: .7rem;
+    text-decoration: underline #ffffff91;
+    text-transform: uppercase; }
     @media screen and (max-width: 960px) {
-      .section-home .profil {
-        font-size: 1.5rem; } }
+      .section-presentation .profil {
+        margin-left: 40%; } }
 
 .section-portfolio .sub-nav {
   width: 100%;
@@ -224,12 +232,12 @@ header {
     .section-portfolio .sub-nav .nav_item {
       width: auto;
       text-decoration: none;
-      color: #cccccc; }
+      color: #ffffff91; }
       .section-portfolio .sub-nav .nav_item:hover {
         color: #bac964; }
 
 .section-portfolio .contenair .projet {
-  width: 295;
+  width: 295px;
   height: 310px;
   margin: 5px auto;
   display: flex;
@@ -257,6 +265,9 @@ header {
     color: #495057;
     text-align: center;
     margin-bottom: 10px; }
+
+.section-portfolio .none {
+  display: none; }
 
 .section-about .contenair .list {
   width: 48%;
@@ -363,7 +374,7 @@ header {
       line-height: 1.5; }
 
 .section-login {
-  height: 560px; }
+  height: 564px; }
   .section-login .contenair {
     display: flex;
     flex-direction: column;
