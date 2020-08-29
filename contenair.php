@@ -7,17 +7,17 @@
         {
             ?>
             <div class="projet">
-                <div class="projet_img">
+                <div class="projet_item">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
                     </a>
                 </div>
-                <div class="projet_title">
+                <div class="projet_item projet_item--title">
                     <a href="<?= $row['url'];?>">
                         <p><?= $row['titre'];?></p>
                     </a>
                 </div>
-                <div class="projet_type">
+                <div class="projet_item projet_item--type">
                     <p><?= $row['name'];?></p>
                 </div>
             </div> 
@@ -38,21 +38,21 @@
         {
             ?>
             <div class="projet">
-                <div class="projet_img">
+                <div class="projet_item">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
                     </a>
                 </div>
-                <div class="projet_title">
+                <div class="projet_item projet_item--title">
                     <a href="<?= $row['url'];?>">
                         <p><?= $row['titre'];?></p>
                     </a>
                 </div>
-                <div class="projet_type">
+                <div class="projet_item projet_item--type">
                     <p><?= $row['name'];?></p>
                 </div>
             </div> 
-            <?php 
+            <?php  
         }  
         ?> 
     <!--------php --------------------->
@@ -68,17 +68,17 @@
         {
             ?>
             <div class="projet">
-                <div class="projet_img">
+                <div class="projet_item">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
                     </a>
                 </div>
-                <div class="projet_title">
+                <div class="projet_item projet_item--title">
                     <a href="<?= $row['url'];?>">
                         <p><?= $row['titre'];?></p>
                     </a>
                 </div>
-                <div class="projet_type">
+                <div class="projet_item projet_item--type">
                     <p><?= $row['name'];?></p>
                 </div>
             </div> 
@@ -98,21 +98,21 @@
         {
             ?>
             <div class="projet">
-                <div class="projet_img">
+                <div class="projet_item">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
                     </a>
                 </div>
-                <div class="projet_title">
+                <div class="projet_item projet_item--title">
                     <a href="<?= $row['url'];?>">
                         <p><?= $row['titre'];?></p>
                     </a>
                 </div>
-                <div class="projet_type">
+                <div class="projet_item projet_item--type">
                     <p><?= $row['name'];?></p>
                 </div>
             </div> 
-            <?php 
+            <?php  
         }  
         ?> 
     <!--------php --------------------->

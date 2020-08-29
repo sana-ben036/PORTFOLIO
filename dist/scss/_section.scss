@@ -76,7 +76,7 @@
         
         .projet{
             width: 295px;
-            height: 310px;
+            min-height: 40vh;
             margin: 5px auto;
             //padding: 10px ;
             @include flex (flex,column,nowrap);
@@ -84,30 +84,20 @@
                 text-decoration: none;
                 color:$color7;
             }
-            
-            &_img{
-                width: 295px;
-                height: 230px;
-                margin-bottom: 10px ;
+            &_item{
+                margin: 10px auto;
+                text-align: center;
                 img{
-                width: 295px;
-                border-radius: 20px;
+                    width: 295px;
+                    border-radius: 20px;
                 }
-            }
-            &_title{
-                width: 295px;
-                height: 40px;
-                text-align: center;
-                margin-bottom: 10px ;
-                font-size: 1.2rem;
-            }
-            &_type{
-                width: 295px;
-                height: 40px;
-                color:$color6;
-                text-align: center;
-                margin-bottom: 10px ;
-            }
+                &--title{
+                    font-size: 1.2rem;
+                }
+                &--type{
+                    color:$color6;
+                }
+            }   
         }
     }
     .none{
@@ -147,7 +137,7 @@
         
             }
             &_item{
-                min-height: 180px ;
+                min-height: 10vh ;
                 background-color: $color3;
                 margin: 5px 0;
                 padding: 15px;
