@@ -250,6 +250,55 @@
 }
 
 
+//::::::::::::::::::: services ::::::::::::::::::::::
+
+
+.section-services{
+    @extend .section;
+    .title{
+        @extend .section-title; 
+    }
+    .contenair{
+        @extend .section-contenair;
+        .service{
+            width: 320px;
+            min-height: 40vh;
+            background-color: $color3;
+            margin: 5px auto;
+            padding: 15px;
+            text-align: center;
+            @include flex (flex,column,nowrap);
+            &_item{
+                margin: 15px auto;
+                img{
+                    width: 70%;
+                    
+                }
+                &--title{
+                    color: $color7;
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    
+    
+                }
+                &--text{
+                    color: $color10;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    
+                }
+
+            }
+            
+            
+            
+
+        }
+    }
+
+}
+
+
 //::::::::::::::::::: contact ::::::::::::::::::::::
 
 .section-contact{

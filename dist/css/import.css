@@ -8,26 +8,26 @@ body {
   background-color: #212121;
   font-size: 1rem; }
 
-.section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
+.section, .section-portfolio, .section-about, .section-skills, .section-services, .section-contact, .section-login {
   width: 70%;
   height: auto;
   margin: 20px auto;
   padding: 10px 0; }
   @media screen and (max-width: 1260px) {
-    .section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
+    .section, .section-portfolio, .section-about, .section-skills, .section-services, .section-contact, .section-login {
       width: 90%; } }
   @media screen and (max-width: 450px) {
-    .section, .section-portfolio, .section-about, .section-skills, .section-contact, .section-login {
+    .section, .section-portfolio, .section-about, .section-skills, .section-services, .section-contact, .section-login {
       width: 98%; } }
 
-.section-title, .section-portfolio .title, .section-about .title, .section-skills .right .title, .section-contact .title, .section-login .contenair .title {
+.section-title, .section-portfolio .title, .section-about .title, .section-skills .right .title, .section-services .title, .section-contact .title, .section-login .contenair .title {
   height: 40px;
   margin: 10px auto;
   color: #ffffff;
   text-align: center;
   font-size: 1.7rem; }
 
-.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-contact .contenair, .section-login .contenair {
+.section-contenair, .section-portfolio .contenair, .section-about .contenair, .section-services .contenair, .section-contact .contenair, .section-login .contenair {
   width: 100%;
   height: auto;
   margin: 40px auto;
@@ -332,6 +332,29 @@ header {
     .section-skills .left img {
       width: 98%;
       border-radius: 10px; }
+
+.section-services .contenair .service {
+  width: 320px;
+  min-height: 40vh;
+  background-color: #333333;
+  margin: 5px auto;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; }
+  .section-services .contenair .service_item {
+    margin: 15px auto; }
+    .section-services .contenair .service_item img {
+      width: 70%; }
+    .section-services .contenair .service_item--title {
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 300; }
+    .section-services .contenair .service_item--text {
+      color: #ffffff91;
+      font-weight: 300;
+      line-height: 1.5; }
 
 .section-contact .contenair .form {
   width: 600px;

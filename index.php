@@ -86,7 +86,7 @@
     </section> 
 
     <!-- section-about -->
-    <section class="section-about" >
+    <section class="section-about" id="section-about" >
         <div class="title">
             <p><strong>À propos</strong> De Moi</p>
         </div><br>
@@ -175,6 +175,71 @@
                     }
             ?>
         </div>
+    </section>
+    
+
+    <!-- section-services -->
+    <section class="section-services">
+
+        <div class="title">
+            <p><strong>Services</strong> à offrir</p>
+        </div><br>
+
+        <div class="contenair">
+
+            <div class="service">
+                <div class="service_item">
+                    <img src="dist/img/Assets/web.png" alt="">
+                </div>
+                <div class="service_item service_item--title">
+                    <p>Web Design</p>
+                </div>
+                <div class="service_item service_item--text">
+                    <p>Maquettage d’une application ou d’un site web </p>
+                    <span>***</span>
+                    <p>Balsamiq et Adobe XD</p>
+                </div>
+
+            </div>
+            <div class="service">
+                <div class="service_item">
+                    <img src="dist/img/Assets/frontend.png" alt="">
+                </div>
+                <div class="service_item service_item--title">
+                    <p>Front-End</p>
+                </div>
+                <div class="service_item service_item--text">
+                    <p>Réalisation des interfaces utilisateur web statique ou dynamique </p>  
+                    <span>***</span>
+                    <p>HTML, CSS et JAVASCRIPT</p>
+                </div>
+
+            </div>
+            <div class="service">
+                <div class="service_item">
+                    <img src="dist/img/Assets/backend.png" alt="">
+                </div>
+                <div class="service_item service_item--title">
+                    <p>Back-End</p>
+                </div>
+                <div class="service_item service_item--text">
+                    <p>Développement de la partie back-end des projets web </p>
+                    <span>***</span>
+                    <p>PHP et SQL</p>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
     </section>
 
     <!-- section-contact -->
