@@ -6,8 +6,8 @@
         while ($row = $sth->fetch())
         {
             ?>
-            <div class="projet">
-                <div class="projet_item">
+            <div class="projet zoom">
+                <div class="projet_item ">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
                     </a>
@@ -37,7 +37,7 @@
         while ($row = $sth->fetch())
         {
             ?>
-            <div class="projet">
+            <div class="projet zoom">
                 <div class="projet_item">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
@@ -67,7 +67,7 @@
         while ($row = $sth->fetch())
         {
             ?>
-            <div class="projet">
+            <div class="projet zoom">
                 <div class="projet_item">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
@@ -97,8 +97,8 @@
         while ($row = $sth->fetch())
         {
             ?>
-            <div class="projet">
-                <div class="projet_item">
+            <div class="projet zoom">
+                <div class="projet_item ">
                     <a href="<?= $row['url'];?>">
                         <img src="admin/<?= $row['image'];?>" alt="">
                     </a>

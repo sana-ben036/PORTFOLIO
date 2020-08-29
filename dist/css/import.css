@@ -79,6 +79,28 @@ body {
   .item:hover, .menu .nav_item:hover {
     color: #bac964; }
 
+/* Noir et blanc */
+.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+
+.grayscale:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0); }
+
+/* Image zoom */
+.zoom {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+
+.zoom:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); }
+
 header {
   display: flex;
   flex-direction: row;

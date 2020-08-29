@@ -68,7 +68,7 @@
     <!-- section-portfolio -->
     <section class="section-portfolio"  id="section-portfolio" >
         <div class="title">
-            <p><strong>Portfolio</strong> Professionel</p>
+            <p><strong>Portfolio</strong> Professionnel</p>
         </div><br>
 
         <div class="sub-nav">
@@ -88,7 +88,7 @@
     <!-- section-about -->
     <section class="section-about" id="section-about" >
         <div class="title">
-            <p><strong>À propos</strong> De Moi</p>
+            <p><strong>À propos</strong> de moi</p>
         </div><br>
 
         <div class="contenair">
@@ -155,7 +155,7 @@
                     {
                 ?>
         <div class="left">
-            <div class="photo">
+            <div class="photo grayscale ">
                 <img src="admin/<?= $row['photo']  ;?>" alt="photo">
             </div>
         </div>
@@ -187,7 +187,7 @@
 
         <div class="contenair">
 
-            <div class="service">
+            <div class="service rounded">
                 <div class="service_item">
                     <img src="dist/img/Assets/web.png" alt="">
                 </div>
@@ -201,7 +201,7 @@
                 </div>
 
             </div>
-            <div class="service">
+            <div class="service rounded ">
                 <div class="service_item">
                     <img src="dist/img/Assets/frontend.png" alt="">
                 </div>
@@ -211,11 +211,11 @@
                 <div class="service_item service_item--text">
                     <p>Réalisation des interfaces utilisateur web statique ou dynamique </p>  
                     <span>***</span>
-                    <p>HTML, CSS et JAVASCRIPT</p>
+                    <p>HTML, CSS et JS</p>
                 </div>
 
             </div>
-            <div class="service">
+            <div class="service rounded ">
                 <div class="service_item">
                     <img src="dist/img/Assets/backend.png" alt="">
                 </div>
@@ -229,23 +229,14 @@
                 </div>
 
             </div>
-
-
-
-
-
         </div>
-
-
-
-
 
     </section>
 
     <!-- section-contact -->
     <section class="section-contact" id="section-contact">
         <div class="title">
-            <p><strong>Contactez</strong> Moi</p>
+            <p><strong>Contactez</strong> moi</p>
 
         </div><br>
 
