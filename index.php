@@ -73,10 +73,10 @@
 
         <div class="sub-nav">
             <ul class="nav">
-                <a id='menu-all' class=" nav nav_item" href="#all">All</a>
-                <a id='menu-design' class=" nav nav_item" href="#design">Design</a>
-                <a id='menu-application'class=" nav nav_item" href="#application">Application</a>
-                <a id='menu-site' class=" nav nav_item" href="#website">Site Web</a>
+                <a id='menu-all' class=" nav nav_item" href="#section-portfolio">All</a>
+                <a id='menu-design' class=" nav nav_item" href="#section-portfolio">Design</a>
+                <a id='menu-application'class=" nav nav_item" href="#section-portfolio">Application</a>
+                <a id='menu-site' class=" nav nav_item" href="#section-portfolio">Site Web</a>
             </ul>
         </div><br>
 
@@ -242,7 +242,11 @@
 
 
 <!-- JS -->
-<script src="dist/js/script.js"></script>
+
+
+
+<script src="dist/js/menu.js"></script>
+<script src="dist/js/contenair.js"></script>
 
 </body>
 </html>

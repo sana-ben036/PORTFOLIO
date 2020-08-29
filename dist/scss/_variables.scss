@@ -19,6 +19,7 @@ $primaryfont: 'Montserrat', sans-serif;
 $secondaryfont:'Caveat Brush', cursive;
 
 
+// general body style::::::::::::::::::
 
 * {
     padding: 0;
@@ -33,6 +34,7 @@ body {
     font-size: 1rem;
 
 }
+
 
 // @mixin:::::::::::::::::::::::::
 
@@ -51,6 +53,7 @@ body {
     right: $r;
 }
 
+// @class repeated:::::::::::::::::::::::::::
 .section{
     width: 70%;
     height: auto;
@@ -68,9 +71,6 @@ body {
         width: 98%;
         
     }
-    
-    
-
 }
 
 .section-title{
