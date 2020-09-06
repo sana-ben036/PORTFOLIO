@@ -45,7 +45,6 @@ header{
             height: 60px;
             justify-content: space-around;
             margin: 20px auto ;
-            
             @include flex (flex,row,wrap);
             @media screen and (max-width: 1150px ){
                 width: 60% ;
@@ -59,7 +58,7 @@ header{
             }
             @media screen and (max-width: 800px ){
                 width: 100% ;
-                margin: auto 0;
+                //margin: 20px 0;
                 
             }
             @media screen and (max-width: 620px ){

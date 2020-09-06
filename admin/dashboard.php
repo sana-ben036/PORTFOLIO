@@ -94,7 +94,7 @@
             </table>
 
 
-            <!-- info form -->
+            <!-- info form 
             <form style='display:none;margin: 10px auto' id='form' class="form" action="" method='POST' enctype="multipart/form-data">
         
         
@@ -124,7 +124,7 @@
 
                 
                     
-            </form> 
+            </form> -->
 
             
             
@@ -155,7 +155,7 @@
     </footer>
 
 
-<!-- JS -->
+<!-- JS 
 <script >
 const edit = document.getElementById("edit");
 const save = document.getElementById("save");
@@ -182,7 +182,7 @@ function showTable() {
 }
 
 
-</script>
+</script>-->
     
 </body>
 </html>
