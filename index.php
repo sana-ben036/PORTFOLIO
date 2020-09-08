@@ -50,7 +50,7 @@
     </div>
 
     <!-- section-home -->
-    <section style="background-image: url(dist/img/Assets/bg.jpg);opacity:30%" class="section-home"  id="section-home" >
+    <section style="background-image: url(dist/img/Assets/bg.jpg);opacity:50%" class="section-home"  id="section-home" >
         
     </section> 
     <section class="section-presentation">
