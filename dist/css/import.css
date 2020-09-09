@@ -348,7 +348,7 @@ header {
 
 .section-services .contenair .service {
   width: 320px;
-  min-height: 45vh;
+  min-height: 20vh;
   background-color: #333333;
   margin: 5px auto;
   padding: 15px;
